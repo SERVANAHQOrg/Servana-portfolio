@@ -1,22 +1,35 @@
+import { motion } from "framer-motion";
 import "../styles/Sections.css";
 
 function Portfolio() {
+  const projects = [
+    { title: "Project One", img: "https://via.placeholder.com/300" },
+    { title: "Project Two", img: "https://via.placeholder.com/300" },
+    { title: "Project Three", img: "https://via.placeholder.com/300" },
+  ];
+
   return (
     <section id="portfolio" className="section">
       <h2>Our Work</h2>
       <div className="cards">
-        <div className="card">
-          <img src="https://via.placeholder.com/300" alt="Project 1" />
-          <h3>Project One</h3>
-        </div>
-        <div className="card">
-          <img src="https://via.placeholder.com/300" alt="Project 2" />
-          <h3>Project Two</h3>
-        </div>
-        <div className="card">
-          <img src="https://via.placeholder.com/300" alt="Project 3" />
-          <h3>Project Three</h3>
-        </div>
+        {projects.map((project, i) => (
+          <motion.div
+            key={i}
+            className="card"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <motion.img
+              src={project.img}
+              alt={project.title}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            />
+            <h3>{project.title}</h3>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
