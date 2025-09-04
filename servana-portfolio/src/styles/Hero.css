@@ -1,0 +1,74 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    height: 100vh;
+    background: #f9f9f9;
+}
+
+/* Left side */
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Image styling */
+.hero-img {
+    width: 480px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 55% 45% 60% 40% / 55% 45% 60% 40%;
+    animation: morph 8s ease-in-out infinite;
+    border: 5px solid #22c55e65;
+}
+
+@keyframes morph {
+
+    0%,
+    100% {
+        border-radius: 55% 45% 60% 40% / 55% 45% 60% 40%;
+    }
+
+    50% {
+        border-radius: 40% 60% 45% 55% / 60% 40% 55% 45%;
+    }
+}
+
+/* Button styling */
+.hr-btn {
+    background: #22C55E;
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hr-btn:hover {
+    background: #005fcc;
+}
+
+/* Right side text (centered vertically) */
+.hero-content {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #555;
+}

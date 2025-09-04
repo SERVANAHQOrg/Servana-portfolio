@@ -3,12 +3,13 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: #24a54d;
-    color: white;
+    color: #22C55E;
+    border-radius: 20px;
+    margin-top: 20px;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 4.5rem;
     font-weight: bold;
 }
 
@@ -16,11 +17,12 @@
     display: flex;
     list-style: none;
     gap: 20px;
+    font-size:25px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    color: #22C55E;
     font-weight: 500;
 }
 

@@ -1,40 +1,31 @@
-import { motion } from "framer-motion";
-import "../styles/Sections.css";
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.3, duration: 0.6 }
-  }),
-};
+import "../styles/Services.css";
+import { FaBroom, FaPlug, FaTruck, FaLeaf, FaBug, FaTools, FaHome, FaHammer, FaCouch, FaChair, FaDumbbell } from "react-icons/fa";
 
 function Services() {
-  const services = [
-    { title: "Web Development", text: "Responsive and modern websites to boost your online presence." },
-    { title: "Digital Marketing", text: "Targeted strategies to help you reach and grow your audience." },
-    { title: "Business Consulting", text: "Expert advice to optimize operations and maximize profits." },
-  ];
-
   return (
-    <section id="services" className="section">
-      <h2>Our Services</h2>
-      <div className="cards">
-        {services.map((service, i) => (
-          <motion.div
-            key={i}
-            className="card"
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={cardVariants}
-          >
-            <h3>{service.title}</h3>
-            <p>{service.text}</p>
-          </motion.div>
-        ))}
+    <section id="services" className="services">
+      <h2>Services</h2>
+      <div className="service-filters">
+        <button className="active">All Services</button>
+        <button>Cleaning</button>
+        <button>Plumbing</button>
+        <button>Electrical</button>
+        <button>Moving</button>
+        <button>Landscaping</button>
+      </div>
+
+      <div className="service-grid">
+        <div className="service-item"><FaBroom /><p>Cleaning</p></div>
+        <div className="service-item"><FaPlug /><p>Plumbing</p></div>
+        <div className="service-item"><FaTruck /><p>Moving</p></div>
+        <div className="service-item"><FaLeaf /><p>Landscaping</p></div>
+        <div className="service-item"><FaBug /><p>Pest Control</p></div>
+        <div className="service-item"><FaTools /><p>Appliance Repair</p></div>
+        <div className="service-item"><FaHome /><p>Home Repair</p></div>
+        <div className="service-item"><FaHammer /><p>Handyman</p></div>
+        <div className="service-item"><FaCouch /><p>Furniture Assembly</p></div>
+        <div className="service-item"><FaChair /><p>Handyman</p></div>
+        <div className="service-item"><FaDumbbell /><p>Heavy Lifting</p></div>
       </div>
     </section>
   );

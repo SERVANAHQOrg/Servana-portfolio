@@ -1,0 +1,61 @@
+.services {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #fdfdfd;
+}
+
+.services h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: #003b49;
+}
+
+.service-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.service-filters button {
+    background: #f5f7f8;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.service-filters .active {
+    background: #00796b;
+    color: #fff;
+}
+
+.service-filters button:hover {
+    background: #00796b;
+    color: #fff;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    color: #003b49;
+    font-size: 1.2rem;
+}
+
+.service-item svg {
+    font-size: 2.5rem;
+    color: #00796b;
+}

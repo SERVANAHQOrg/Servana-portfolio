@@ -7,13 +7,26 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <h1 className="logo">MyCompany</h1>
+      <h1 className="logo">SERVANA</h1>
       <ul className={open ? "nav-links open" : "nav-links"}>
-        <li><Link to="hero" smooth={true} duration={500}>Home</Link></li>
-        <li><Link to="about" smooth={true} duration={500}>About</Link></li>
-        <li><Link to="services" smooth={true} duration={500}>Services</Link></li>
-        <li><Link to="portfolio" smooth={true} duration={500}>Portfolio</Link></li>
-        <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+        <li className='tooltip'>
+            <Link to="hero" smooth={true} duration={500}><i class="fa-regular fa-house"></i>
+        <span className="tooltiptext">Home</span>
+        </Link></li>
+
+        <li className='tooltip'>
+            <Link to="about" smooth={true} duration={500}><i class="fa-regular fa-lightbulb"></i>
+            <span className="tooltiptext">About</span>
+            </Link></li>
+        <li className='tooltip'>
+            <Link to="services" smooth={true} duration={500}><i class="fa-solid fa-hand-holding-heart"></i>
+            <span className="tooltiptext">Services</span>
+            </Link></li>
+        <li className='tooltip'>
+            <Link to="contact" smooth={true} duration={500}><i className="fa-solid fa-phone"></i>
+            <span className="tooltiptext">Contact</span>
+            </Link></li>
+
       </ul>
       <button className="menu-toggle" onClick={() => setOpen(!open)}>
         ☰

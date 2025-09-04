@@ -1,76 +1,112 @@
+/* section layout */
 .section {
-    padding: 60px 20px;
+    padding: 72px 20px;
     text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    scroll-margin-top: 80px;
+    /* offsets fixed navbar when using hash/scroll */
 }
 
 .section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
-    color: #24a54d;
+    margin-bottom: 16px;
+    color: #01C03E;
 }
 
-.section p {
-    max-width: 700px;
-    margin: 0 auto 30px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
+.section-text {
+    max-width: 720px;
+    margin: 0 auto 28px;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: #2e2e2e;
 }
 
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+/* grid & card shared styles (Services / Portfolio) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    align-items: stretch;
 }
 
 .card {
-    background: #f4f4f4;
+    background: #f7f8fa;
+    border: 1px solid #e9edf3;
+    border-radius: 14px;
     padding: 20px;
+    text-align: left;
+    box-shadow: 0 6px 16px rgba(13, 71, 161, 0.06);
+    transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 22px rgba(13, 71, 161, 0.12);
+}
+
+.card h3 {
+    margin: 8px 0 6px;
+    font-size: 1.1rem;
+    color: #01C03E;
+}
+
+.card p {
+    margin: 0;
+    color: #3b3b3b;
+    line-height: 1.6;
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
-    flex: 1 1 280px;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
-.card img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
+/* contact form */
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-    gap: 15px;
+    display: grid;
+    gap: 14px;
+    max-width: 440px;
+    margin: 18px auto 0;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d7ddea;
+    border-radius: 10px;
+    font-size: 0.98rem;
+    outline: none;
+    background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #01C03E;
+    box-shadow: 0 0 0 3px rgba(13, 71, 161, 0.1);
 }
 
 .contact-form button {
-    padding: 12px;
-    background: #24a54d;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
+    padding: 12px 14px;
+    margin: auto;
+    width: 60%;
+    border: 0;
+    border-radius: 10px;
+    background: #01C03E;
+    color: #fff;
+    font-weight: 600;
     cursor: pointer;
 }
 
-.contact-form button:hover {
-    background: #003B00
-}
+@media (max-width: 640px) {
+    .section {
+        padding: 56px 16px;
+    }
 
-.footer {
-    background: #24a54d;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    .card-img {
+        height: 160px;
+    }
 }

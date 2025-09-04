@@ -1,9 +1,12 @@
-import "../styles/Sections.css";
+import "../styles/Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} MyCompany. All rights reserved.</p>
+      <p>© {new Date().getFullYear()} Servana. All Rights Reserved.</p>
+      <p>
+        Built with ❤️ by <a href="https://yourcompany.com">Servana Team</a>
+      </p>
     </footer>
   );
 }
