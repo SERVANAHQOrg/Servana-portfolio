@@ -7,7 +7,7 @@
 .services h2 {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
-    color: #003b49;
+    color: #22C55E;
 }
 
 .service-filters {
@@ -29,12 +29,12 @@
 }
 
 .service-filters .active {
-    background: #00796b;
+    background: #22C55E;
     color: #fff;
 }
 
 .service-filters button:hover {
-    background: #00796b;
+    background: #22C55E;
     color: #fff;
 }
 
@@ -51,11 +51,11 @@
     flex-direction: column;
     align-items: center;
     gap: 0.6rem;
-    color: #003b49;
+    color: #22C55E;
     font-size: 1.2rem;
 }
 
 .service-item svg {
     font-size: 2.5rem;
-    color: #00796b;
+    color: #22C55E;
 }

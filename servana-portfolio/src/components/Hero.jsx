@@ -1,57 +1,26 @@
-import { motion } from "framer-motion";
-import "../styles/Hero.css";
 import familyImg from "../assets/family.jpg";
+import "../styles/Hero.css";
 
-function Hero() {
+export default function Hero() {
   return (
-    <section id="hero" className="hero">
-      {/* Left side: Image + Button */}
-      <div className="hero-left">
-        <motion.img
-          src={familyImg}
-          alt="family"
-          className="hero-img"
-          animate={{
-            rotate: [0, 3, -3, 3, 0],
-            scale: [1, 1.05, 1, 1.05, 1],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 4,
-            ease: "easeInOut",
-          }}
-        />
+    <section className="brochure-hero">
+      {/* Yellow edge half-circles */}
+      <div className="accent-circle left" aria-hidden />
+      <div className="accent-circle right" aria-hidden />
 
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ type: "spring", stiffness: 200 }}
-          className="hr-btn"
-        >
-          Get Started
-        </motion.button>
+      {/* Dark background arcs (smaller than the main image) */}
+      <div className="rings" aria-hidden>
+        <div className="ring ring-1" />
+        <div className="ring ring-2" />
       </div>
 
-      {/* Right side: Text (centered) */}
-      <div className="hero-content">
-        <motion.h2
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Welcome to SERVANA
-        </motion.h2>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
-        >
-          We provide services to get you peace.
-        </motion.p>
+      {/* Main circular image (slightly bigger than arcs) */}
+      <div className="hero-circle">
+        <img src={familyImg} alt="Family" loading="lazy"/>
+        <div className="headline" data-aos="fade-up">
+          <h1><i class="fa-solid fa-leaf"></i>SERVANA</h1>
+        </div>
       </div>
     </section>
   );
 }
-
-export default Hero;

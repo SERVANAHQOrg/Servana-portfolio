@@ -4,12 +4,32 @@
     align-items: center;
     padding: 15px 30px;
     color: #22C55E;
-    border-radius: 20px;
-    margin-top: 20px;
+    /* margin-top: 10px; */
+
+    position: sticky;
+    /* makes it stay in place */
+    top: 0;
+    /* sticks to the top */
+    z-index: 1000;
+    /* stays above other sections */
+    background: #000000;
+    /* ensure it doesn’t become transparent */
 }
 
-.logo {
-    font-size: 4.5rem;
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 52px;
+    /* adjust size */
+    height: 52px;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -53,4 +73,11 @@
     .menu-toggle {
         display: block;
     }
+}
+
+
+.navbar.scrolled {
+    background-color: #00000056;
+    box-shadow: 0 2px 8px rgba(84, 163, 19, 0.753);
+    transition: box-shadow 0.3s ease, background 0.3s ease;
 }

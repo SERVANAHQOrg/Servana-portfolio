@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <p>© {new Date().getFullYear()} Servana. All Rights Reserved.</p>
       <p>
-        Built with ❤️ by <a href="https://yourcompany.com">Servana Team</a>
+        Built with Love by <a href="https://yourcompany.com">Servana Team</a>
       </p>
     </footer>
   );

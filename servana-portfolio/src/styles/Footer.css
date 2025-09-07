@@ -1,7 +1,7 @@
 /* src/styles/Footer.css */
 
 .footer {
-    background: #22C55E;
+    background: #2f2f2f;
     color: #fff;
     text-align: center;
     padding: 1.5rem 1rem;
@@ -11,11 +11,14 @@
 .footer p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .footer a {
-    color: #073b05;
+    color: #22C55E;
     text-decoration: none;
+    margin-right: 26px;
 }
 
 .footer a:hover {
