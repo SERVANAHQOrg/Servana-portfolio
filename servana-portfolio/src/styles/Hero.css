@@ -7,6 +7,19 @@
     color: #fff;
 }
 
+h1{
+    display: flex;
+    align-items: center;
+    padding-left: 120px;
+    padding-top: 330px;
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #22C55E;
+    font-size: 30px;
+}
+
+
 /* Yellow half circles */
 .accent-circle {
     position: absolute;
@@ -96,10 +109,29 @@
     left: 290px;
     text-align: center;
 
-    h1{
-       color: #22C55E;
+img{
+    all: unset;
+}
+
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-icon {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+    }
+
+    .brand-name {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #22C55E;
     }
 }
+
 
 
 

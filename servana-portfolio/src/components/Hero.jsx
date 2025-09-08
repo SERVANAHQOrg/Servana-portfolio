@@ -1,9 +1,17 @@
-import familyImg from "../assets/family.jpg";
+import familyImg from "../assets/family.webp";
 import "../styles/Hero.css";
+import logo from "../assets/servanalogo.png";
 
 export default function Hero() {
   return (
     <section className="brochure-hero">
+
+      <h1>
+        BUILT ON TRUST. 
+<br />
+        GROWING WITH COMMUNITIES.
+      </h1>
+
       {/* Yellow edge half-circles */}
       <div className="accent-circle left" aria-hidden />
       <div className="accent-circle right" aria-hidden />
@@ -16,9 +24,13 @@ export default function Hero() {
 
       {/* Main circular image (slightly bigger than arcs) */}
       <div className="hero-circle">
-        <img src={familyImg} alt="Family" loading="lazy"/>
+        <img src={familyImg} alt="Family"   loading="eager"   // 👈 force load early
+  fetchpriority="high" />
         <div className="headline" data-aos="fade-up">
-          <h1><i class="fa-solid fa-leaf"></i>SERVANA</h1>
+                      <div className="navbar-logo">
+                  <img src={logo} alt="Servana Logo" className="logo-icon" />
+                  <span className="brand-name">SERVANA</span>
+                </div>
         </div>
       </div>
     </section>

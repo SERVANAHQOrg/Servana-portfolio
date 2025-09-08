@@ -31,6 +31,8 @@
 .brand-name {
     font-size: 2rem;
     font-weight: bold;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
 }
 
 .nav-links {
