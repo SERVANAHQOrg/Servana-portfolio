@@ -1,29 +1,24 @@
-import { motion } from "framer-motion";
+// Splash.jsx
 import { useEffect, useState } from "react";
-import logo from "../assets/servana-logo.jpeg";
 import "../styles/SplashScreen.css";
+import logo from "../assets/logo.jpeg";
 
-function SplashScreen({ onFinish }) {
+export default function Splash({ onFinish }) {
+  const [done, setDone] = useState(false);
+
   useEffect(() => {
-    // Call onFinish after animation ends
     const timer = setTimeout(() => {
-      onFinish();
-    }, 3000); // 3s
+      setDone(true);
+      onFinish?.();
+    }, 3000); // 3-second animation
     return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
-    <div className="splash-container">
-      <motion.img
-        src={logo}
-        alt="Servana Logo"
-        initial={{ scale: 1, opacity: 1 }}
-        animate={{ scale: 3, opacity: 0 }}
-        transition={{ duration: 2 }}
-        className="splash-logo"
-      />
+    <div className={`splash ${done ? "fade-out" : ""}`}>
+      <img src={logo} className="logo-animate" alt="Servana Logo" />
+      <p className="tagline">BUILT ON TRUST.
+GROWING WITH COMMUNITIES.</p>
     </div>
   );
 }
-
-export default SplashScreen;

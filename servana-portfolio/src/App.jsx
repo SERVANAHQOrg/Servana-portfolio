@@ -14,12 +14,12 @@ import "aos/dist/aos.css";
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // ✅ always keep hooks at the top
+  // always keep hooks at the top
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  // ✅ conditional return AFTER hooks
+  // conditional return AFTER hooks
   if (loading) {
     return <SplashScreen onFinish={() => setLoading(false)} />;
   }

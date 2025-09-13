@@ -23,14 +23,7 @@ function WhyChooseUs() {
           <h2>Why Choose Us?</h2>
           <span className="tagline" data-aos="zoom-in">Trusted by Thousands</span>
           <p data-aos="fade-up" data-aos-delay="200">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed at ipsum vitae lacus lobortis lacinia. Donec tristique
-            arcu massa, at pharetra tortor feugiat non.
-          </p>
-          <p data-aos="fade-up" data-aos-delay="400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed at ipsum vitae lacus lobortis lacinia. Donec tristique
-            arcu massa, at pharetra tortor feugiat non.
+Servana,We blend trust, care, and technology — giving families peace of mind while empowering professionals to grow with dignity.
           </p>
         </div>
       </div>

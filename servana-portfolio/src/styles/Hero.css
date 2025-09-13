@@ -3,7 +3,6 @@
     min-height: 100vh;
     background: #2f2f2f;
     overflow: hidden;
-    font-family: Arial, sans-serif;
     color: #fff;
 }
 
@@ -12,9 +11,6 @@ h1{
     align-items: center;
     padding-left: 120px;
     padding-top: 330px;
-    font-family: "Rowdies", sans-serif;
-    font-weight: 700;
-    font-style: normal;
     color: #22C55E;
     font-size: 30px;
 }
@@ -127,7 +123,6 @@ img{
 
     .brand-name {
         font-size: 2rem;
-        font-weight: bold;
         color: #22C55E;
     }
 }
@@ -157,27 +152,3 @@ img{
 .word-yellow {
     color: #22C55E;
 }
-
-
-/* Pagination dots */
-/* .pager {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 5;
-}
-
-.pager span {
-    width: 8px;
-    height: 8px;
-    border: 2px solid #22C55E;
-    border-radius: 50%;
-}
-
-.pager span.active {
-    background: #fff;
-    border-color: #fff;
-} */
