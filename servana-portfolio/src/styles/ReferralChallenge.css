@@ -1,0 +1,88 @@
+.referral-two-col {
+    display: flex;
+    flex-wrap: wrap;
+    background: #00000073;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+/* Left image column */
+.image-col {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #ffffff;
+}
+
+.image-col img {
+    max-width: 100%;
+    height: auto;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Right accordion column */
+.accordion-col {
+    flex: 1 1 55%;
+    padding: 2rem;
+}
+
+/* Hover accordion styling */
+.hover-accordion {
+    margin-bottom: 1.25rem;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #22C55E;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.accordion-title {
+    padding: 1rem 1.25rem;
+    background:#22c55e00;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.accordion-body {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 1.25rem;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.hover-accordion.open .accordion-body {
+    max-height: 2000px;
+    /* plenty for long text */
+    opacity: 1;
+    padding: 1.25rem;
+}
+
+.hover-accordion.open {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.hover-accordion h4 {
+    margin-top: 1rem;
+    color: #22C55E;
+}
+
+.hover-accordion ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}

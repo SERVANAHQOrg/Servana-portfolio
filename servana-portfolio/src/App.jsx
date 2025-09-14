@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import SplashScreen from "./components/SplashScreen";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -10,16 +11,16 @@ import "./index.css";
 import WhyChooseUs from "./components/WhyChooseUs";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Dyk from "./components/Dyk";
+import ReferralChallenge from "./pages/ReferralChallenge";
 
 function App() {
   const [loading, setLoading] = useState(true);
 
-  // always keep hooks at the top
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
-  // conditional return AFTER hooks
   if (loading) {
     return <SplashScreen onFinish={() => setLoading(false)} />;
   }
@@ -27,11 +28,22 @@ function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <WhyChooseUs />
-      <About />
-      <Services />
-      <Contact />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Hero />
+              <WhyChooseUs />
+              <About />
+              <Services />
+              <Dyk />
+              <Contact />
+            </>
+          }
+        />
+        <Route path="/referral" element={<ReferralChallenge />} />
+      </Routes>
       <Footer />
     </>
   );
