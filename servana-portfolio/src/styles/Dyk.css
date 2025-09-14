@@ -1,42 +1,77 @@
 .did-you-know {
-    background: #f5f8ff;
-    /* subtle blue background */
-    padding: 60px 20px;
-    text-align: center;
-    margin: 60px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 0px 20px;
+    background-color: #f9f9f9;
 }
 
-.did-you-know .container {
-    max-width: 800px;
+.dyk-container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    /* spacing between image and text */
+    max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: nowrap;
+    /* keep side by side */
 }
 
-.did-you-know h2 {
+.dyk-image {
+    flex: 1;
+    /* image takes 1/2 space */
+    max-width: 50%;
+}
+
+.dyk-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.dyk-content {
+    flex: 1;
+    /* text takes 1/2 space */
+    max-width: 50%;
+}
+
+.dyk-content h2 {
     font-size: 2rem;
-    color: #222;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.did-you-know p {
+.dyk-content p {
     font-size: 1.1rem;
-    color: #444;
-    margin-bottom: 24px;
+    margin-bottom: 25px;
+    line-height: 1.6;
 }
 
 .dyk-btn {
-    background: #007bff;
+    padding: 12px 25px;
+    background-color: #22C55E;
     color: #fff;
-    padding: 12px 28px;
-    font-size: 1rem;
-    font-weight: 600;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .dyk-btn:hover {
-    background: #0056b3;
+    color: #22C55E;
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+    .dyk-container {
+        flex-direction: column;
+        /* stack image above text on mobile */
+        gap: 20px;
+    }
+
+    .dyk-image,
+    .dyk-content {
+        max-width: 100%;
+        flex: none;
+    }
 }
