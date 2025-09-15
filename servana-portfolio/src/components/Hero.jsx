@@ -26,12 +26,6 @@ export default function Hero() {
       <div className="hero-circle">
         <img src={familyImg} alt="Family"   loading="eager"   // 👈 force load early
   fetchpriority="high" />
-        <div className="headline" data-aos="fade-up">
-                      <div className="navbar-logo">
-                  <img src={logo} alt="Servana Logo" className="logo-icon" />
-                  <span className="brand-name">SERVANA</span>
-                </div>
-        </div>
       </div>
     </section>
   );

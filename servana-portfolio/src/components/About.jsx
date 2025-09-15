@@ -97,9 +97,9 @@ function About() {
       </div>
 
       {/* === Our Story === */}
-      <div className="about-wrapperr">
+      <div className="about-wrappperr">
         <div className="about-layerr layerrr1"></div>
-        <div className="about-layer layerrr2"></div>
+        <div className="about-layerr layerrr2"></div>
       
 
         <div className="we-text" data-aos="fade-up" data-aos-duration="1000">

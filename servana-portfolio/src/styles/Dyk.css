@@ -1,5 +1,5 @@
 .did-you-know {
-    padding: 0px 20px;
+    padding: 2rem 20px;
     background-color: #f9f9f9;
 }
 
@@ -7,16 +7,13 @@
     display: flex;
     align-items: center;
     gap: 70px;
-    /* spacing between image and text */
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: nowrap;
-    /* keep side by side */
 }
 
 .dyk-image {
     flex: 1;
-    /* image takes 1/2 space */
     max-width: 50%;
 }
 
@@ -29,7 +26,6 @@
 
 .dyk-content {
     flex: 1;
-    /* text takes 1/2 space */
     max-width: 50%;
 }
 
@@ -65,7 +61,6 @@
 @media (max-width: 900px) {
     .dyk-container {
         flex-direction: column;
-        /* stack image above text on mobile */
         gap: 20px;
     }
 
@@ -73,5 +68,20 @@
     .dyk-content {
         max-width: 100%;
         flex: none;
+        text-align: center;
+        /* center text for mobile */
+    }
+
+    .dyk-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .dyk-content p {
+        font-size: 1rem;
+    }
+
+    .dyk-btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
     }
 }

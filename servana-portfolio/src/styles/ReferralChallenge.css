@@ -18,36 +18,35 @@
     justify-content: space-between;
     gap: 6rem;
     max-width: 1800px;
+}
 
-    p{
-        font-size: 20px;
-        right: -40px;
-    }
+.ref-wrapperrr p {
+    font-size: 20px;
+    right: -40px;
 }
 
 .header {
     font-size: 60px;
     color: #22c55e;
     margin-bottom: 8rem;
-    padding-top: 0%;
+    padding-top: 0;
+    line-height: 1.2;
 }
 
+/* Hero CTA buttons */
 .hero-cta-buttons {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
 }
 
-.btn-primary{
+.btn-primary {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border-radius: 0.8rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-
-.btn-primary {
     background-color: #22c55e;
     color: #fff;
     border: none;
@@ -60,29 +59,13 @@
 }
 
 /* === Wrapper Sections === */
-.ref-wrapper{
-        position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            left: -280px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            background-color: #fff;
-            border-radius: 1.5rem;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-}
-
-
+.ref-wrapper,
 .ref-wrapper2 {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    right: -280px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 2rem;
@@ -91,6 +74,7 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
+/* Alternate layout */
 .ref-wrapper2 {
     flex-direction: row-reverse;
 }
@@ -162,7 +146,6 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* Highlighted tier (e.g., Most Popular / Plus) */
 .highlight {
     border: 2px solid #22c55e;
     box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
@@ -205,27 +188,6 @@
     transform: translateY(0);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-
-    .ref-wrapper,
-    .ref-wrapper2 {
-        flex-direction: column;
-        padding: 2rem 1rem;
-    }
-
-    .ref-human {
-        width: 80%;
-        margin: 1rem 0 0 0;
-    }
-
-    .hero-cta-buttons {
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-}
-
-
 /* Floating animation for images */
 @keyframes float {
     0% {
@@ -247,5 +209,48 @@
 
 .ref-human-right {
     animation: float 5s ease-in-out infinite;
-    /* slightly different timing */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+
+    .ref-wrapper,
+    .ref-wrapper2 {
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .ref-human {
+        width: 80%;
+        margin: 1rem 0 0 0;
+    }
+
+    .hero-cta-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .header {
+        font-size: 42px;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .ref-wrapper,
+    .ref-wrapper2 {
+        left: 0;
+        right: 0;
+        padding: 1.5rem 1rem;
+    }
+
+    .ref-text {
+        text-align: center;
+    }
 }

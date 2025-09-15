@@ -1,10 +1,10 @@
+/* Existing About CSS (unchanged) */
 .about {
     padding: 4rem 2rem;
     background: #fdfdfd;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    text-align: left;
     max-width: 1000px;
     margin: auto;
     text-align: center;
@@ -70,10 +70,7 @@
     color: #000000;
 }
 
-
-
-
-.about-wrapper{
+.about-wrapper {
     position: relative;
     right: 12%;
     background-color: #00000023;
@@ -81,9 +78,7 @@
     border-radius: 22px;
     width: 480px;
     height: 280px;
-    /* animation: morph 8s ease-in-out infinite; */
 }
-
 
 .about-layer {
     position: absolute;
@@ -94,12 +89,10 @@
     z-index: 0;
 }
 
-
 .we-text {
     position: relative;
     z-index: 1;
 }
-
 
 .about-wrapper2 {
     position: relative;
@@ -108,10 +101,10 @@
     padding: 1rem 1rem;
     border-radius: 22px;
     width: 480px;
-        height: 280px;
+    height: 280px;
 }
 
-.about-wrapperr {
+.about-wrappperr {
     position: relative;
     left: 120px;
     background-color: #00000023;
@@ -154,8 +147,8 @@
 
 .about-layerr.layerrr2 {
     background: rgba(34, 197, 94, 0.425);
-    transform: translate(910px, 1220px);
-    height: 800px;
+    transform: translate(630px, 510px);
+    height: 80px;
     width: 90px;
 }
 
@@ -177,4 +170,53 @@
     top: 50%;
     left: -510px;
     transform: translateY(-50%);
+}
+
+/* === Responsive Rules === */
+@media (max-width: 1024px) {
+
+    .about-wrapper,
+    .about-wrapper2,
+    .about-wrappperr {
+        position: relative;
+        left: 0;
+        right: 0;
+        width: 90%;
+        height: auto;
+        margin: 1rem auto;
+    }
+
+    .about-layerr.layerrr1,
+    .about-layerr.layerrr2 {
+        transform: none;
+        width: 60px;
+        height: 60px;
+    }
+
+    .about-human {
+        width: 200px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 1rem auto;
+        transform: none;
+    }
+
+    .we-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .we-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-img img {
+        max-width: 250px;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }

@@ -1,4 +1,4 @@
-/* Splash.css – example for Animated Logo Reveal */
+/* Splash.css – Animated Logo Reveal */
 .splash {
     position: fixed;
     inset: 0;
@@ -16,20 +16,26 @@
     pointer-events: none;
 }
 
+/* Logo animation */
 .logo-animate {
     width: 120px;
+    max-width: 30%;
     animation: popIn 1.5s ease forwards;
     filter: drop-shadow(0 0 12px #22c55e);
 }
 
+/* Tagline animation */
 .tagline {
     margin-top: 1rem;
     color: #fff;
     font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 1rem;
     opacity: 0;
     animation: fadeUp 1.5s 1s forwards;
 }
 
+/* Pop-in animation */
 @keyframes popIn {
     0% {
         transform: scale(0.7);
@@ -42,9 +48,31 @@
     }
 }
 
+/* Fade-up animation */
 @keyframes fadeUp {
     to {
         opacity: 1;
         transform: translateY(-4px);
+    }
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 768px) {
+    .logo-animate {
+        width: 90px;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-animate {
+        width: 70px;
+    }
+
+    .tagline {
+        font-size: 0.8rem;
     }
 }

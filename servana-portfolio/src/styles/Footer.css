@@ -4,21 +4,43 @@
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    /* stack items vertically on mobile */
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .footer p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
-    display: flex;
-    justify-content: flex-end;
+    display: block;
+    /* remove flex-end alignment on mobile */
+    text-align: center;
 }
 
 .footer a {
     color: #22C55E;
     text-decoration: none;
-    margin-right: 26px;
+    margin: 0 8px;
+    /* smaller spacing for mobile */
 }
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        padding: 1rem 1rem;
+    }
+
+    .footer p {
+        font-size: 0.85rem;
+    }
+
+    .footer a {
+        font-size: 0.85rem;
+    }
 }

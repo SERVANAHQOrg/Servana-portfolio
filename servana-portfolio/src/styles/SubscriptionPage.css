@@ -1,0 +1,157 @@
+.subscription-page {
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Hero Section */
+.sub-hero {
+    text-align: center;
+    background: #00000075;
+    padding: 4rem 2rem;
+    border-radius: 1.5rem;
+}
+
+.sub-text h1 {
+    font-size: 3rem;
+    color: #22c55e;
+    margin-bottom: 1rem;
+}
+
+.sub-text p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+/* CTA Buttons */
+.sub-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #22c55e;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(34, 197, 94, 0.5);
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #22c55e;
+    border: 2px solid #22c55e;
+}
+
+.btn-secondary:hover {
+    background-color: #22c55e;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(34, 197, 94, 0.3);
+}
+
+/* Subscription Tiers */
+.sub-tiers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.sub-tier-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    flex: 1 1 300px;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.sub-tier-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.sub-tier-card img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    border: 2px solid #22c55e;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+}
+
+.sub-tier-card ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sub-tiers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sub-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .sub-text p {
+        font-size: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sub-tier-card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .sub-text p {
+        font-size: 0.95rem;
+    }
+
+    .sub-cta-buttons {
+        gap: 0.8rem;
+    }
+
+    .sub-tier-card {
+        padding: 1.5rem;
+    }
+}

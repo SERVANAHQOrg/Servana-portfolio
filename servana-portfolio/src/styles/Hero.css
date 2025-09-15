@@ -6,15 +6,14 @@
     color: #fff;
 }
 
-h1{
+h1 {
     display: flex;
     align-items: center;
     padding-left: 120px;
     padding-top: 330px;
     color: #22C55E;
-    font-size: 30px;
+    font-size: 45px;
 }
-
 
 /* Yellow half circles */
 .accent-circle {
@@ -22,7 +21,6 @@ h1{
     border-radius: 50%;
     background: #22C55E;
     z-index: 4;
-    /* now above the dark arcs */
 }
 
 .accent-circle.left {
@@ -56,8 +54,6 @@ h1{
     background: #3a3a3a;
 }
 
-
-
 .ring-2 {
     width: 620px;
     height: 620px;
@@ -66,15 +62,14 @@ h1{
     background: #343434;
 }
 
-/* Main photo circle (larger than arcs) */
+/* Main hero circle */
 .hero-circle {
     position: absolute;
     left: calc(75% + 100px);
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 960px;
-    /* bigger than the dark arcs */
-    height: 960px;
+    width: 1030px;
+    height: 1020px;
     border-radius: 50%;
     overflow: hidden;
     z-index: 3;
@@ -88,15 +83,14 @@ h1{
     opacity: 0;
     transform: scale(0.95);
     animation: fadeInHero 1.2s ease-out forwards;
-    }
-    
-    @keyframes fadeInHero {
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
+}
 
+@keyframes fadeInHero {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 /* Headline inside circle */
 .headline {
@@ -104,31 +98,27 @@ h1{
     bottom: 100px;
     left: 290px;
     text-align: center;
+}
 
-img{
+.headline img {
     all: unset;
 }
 
-
-    .navbar-logo {
-        display: flex;
-        align-items: center;
-    }
-
-    .logo-icon {
-        width: 52px;
-        height: 52px;
-        object-fit: contain;
-    }
-
-    .brand-name {
-        font-size: 2rem;
-        color: #22C55E;
-    }
+.navbar-logo {
+    display: flex;
+    align-items: center;
 }
 
+.logo-icon {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
 
-
+.brand-name {
+    font-size: 2rem;
+    color: #22C55E;
+}
 
 .logo-dot {
     width: 12px;
@@ -151,4 +141,71 @@ img{
 
 .word-yellow {
     color: #22C55E;
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 1024px) {
+    h1 {
+        padding-left: 40px;
+        padding-top: 250px;
+        font-size: 28px;
+    }
+
+    .accent-circle.left {
+        width: 180px;
+        height: 280px;
+        left: -100px;
+    }
+
+    .accent-circle.right {
+        width: 220px;
+        height: 280px;
+        right: -150px;
+        top: 50%;
+    }
+
+    .hero-circle {
+        width: 700px;
+        height: 700px;
+        left: 60%;
+    }
+
+    .headline {
+        left: 50px;
+        bottom: 60px;
+    }
+
+    .headline h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        padding-left: 20px;
+        padding-top: 180px;
+        font-size: 24px;
+    }
+
+    .accent-circle.left,
+    .accent-circle.right {
+        display: none;
+        /* hide extra circles for small screens */
+    }
+
+    .hero-circle {
+        width: 400px;
+        height: 400px;
+        left: 50%;
+        top: 50%;
+    }
+
+    .headline {
+        left: 20px;
+        bottom: 40px;
+    }
+
+    .headline h1 {
+        font-size: 22px;
+    }
 }

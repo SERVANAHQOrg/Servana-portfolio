@@ -13,6 +13,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Dyk from "./components/Dyk";
 import ReferralChallenge from "./pages/ReferralChallenge";
+import SubscriptionPage from "./pages/SubscriptionPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ function App() {
           }
         />
         <Route path="/referral" element={<ReferralChallenge />} />
+        <Route path="/subscriptions" element={<SubscriptionPage />} />
       </Routes>
       <Footer />
     </>

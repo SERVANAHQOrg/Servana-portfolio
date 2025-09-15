@@ -1,4 +1,4 @@
-/* section layout */
+/* Section Layout */
 .section {
     padding: 72px 20px;
     text-align: center;
@@ -22,7 +22,7 @@
     color: #2e2e2e;
 }
 
-/* grid & card shared styles (Services / Portfolio) */
+/* Grid & Card shared styles (Services / Portfolio) */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -64,7 +64,7 @@
     margin-bottom: 10px;
 }
 
-/* contact form */
+/* Contact Form */
 .contact-form {
     display: grid;
     gap: 14px;
@@ -81,6 +81,7 @@
     font-size: 0.98rem;
     outline: none;
     background: #fff;
+    transition: all 0.3s ease;
 }
 
 .contact-form input:focus,
@@ -99,6 +100,19 @@
     color: #fff;
     font-weight: 600;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #019230;
+    transform: translateY(-2px);
+}
+
+/* === Responsive === */
+@media (max-width: 1024px) {
+    .grid {
+        gap: 18px;
+    }
 }
 
 @media (max-width: 640px) {
@@ -108,5 +122,9 @@
 
     .card-img {
         height: 160px;
+    }
+
+    .contact-form button {
+        width: 100%;
     }
 }

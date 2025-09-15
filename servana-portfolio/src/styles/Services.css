@@ -10,6 +10,7 @@
     color: #22C55E;
 }
 
+/* Filter buttons */
 .service-filters {
     display: flex;
     justify-content: center;
@@ -25,7 +26,7 @@
     border-radius: 20px;
     cursor: pointer;
     font-size: 0.9rem;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .service-filters .active {
@@ -38,6 +39,7 @@
     color: #fff;
 }
 
+/* Service grid */
 .service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -46,6 +48,7 @@
     margin: auto;
 }
 
+/* Individual service item */
 .service-item {
     display: flex;
     flex-direction: column;
@@ -53,9 +56,60 @@
     gap: 0.6rem;
     color: #22C55E;
     font-size: 1.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-4px);
+    color: #16a34a;
 }
 
 .service-item svg {
     font-size: 2.5rem;
-    color: #22C55E;
+    color: inherit;
+    /* follows the text color for hover effect */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.service-item:hover svg {
+    transform: scale(1.2);
+}
+
+/* === Responsive adjustments === */
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .service-item {
+        font-size: 1.1rem;
+    }
+
+    .service-item svg {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        padding: 3rem 1rem;
+    }
+
+    .service-filters {
+        gap: 0.6rem;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+
+    .service-item {
+        font-size: 1rem;
+    }
+
+    .service-item svg {
+        font-size: 1.8rem;
+    }
 }
