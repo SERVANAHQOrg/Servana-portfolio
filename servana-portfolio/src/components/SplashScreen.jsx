@@ -17,8 +17,8 @@ export default function Splash({ onFinish }) {
   return (
     <div className={`splash ${done ? "fade-out" : ""}`}>
       <img src={logo} className="logo-animate" alt="Servana Logo" />
-      <p className="tagline">BUILT ON TRUST.
-GROWING WITH COMMUNITIES.</p>
+      <p className="tagline">Built On Trust.
+Growing With Communities.</p>
     </div>
   );
 }

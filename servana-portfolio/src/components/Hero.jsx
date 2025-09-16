@@ -7,9 +7,9 @@ export default function Hero() {
     <section className="brochure-hero">
 
       <h1>
-        BUILT ON TRUST. 
+        Built On Trust. 
 <br />
-        GROWING WITH COMMUNITIES.
+        Growing With Communities.
       </h1>
 
       {/* Yellow edge half-circles */}

@@ -38,7 +38,7 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-logo">
         <img src={logo} alt="Servana Logo" className="logo-icon" />
-        <span className="brand-name">SERVANA</span>
+        <span className="brand-name">Servana</span>
       </div>
       <ul className={open ? "nav-links open" : "nav-links"}>
         <li className='tooltip' onClick={() => handleScroll("hero")}>

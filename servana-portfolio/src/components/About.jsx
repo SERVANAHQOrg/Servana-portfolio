@@ -14,7 +14,7 @@ function About() {
 
   return (
     <section id="about" className="about">
-      <h1>GET TO KNOW SERVANA</h1>
+      <h1>Get To Know Servana</h1>
       
       {/* === About Us === */}
       <div className="about-wrapper">
