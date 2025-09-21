@@ -76,7 +76,7 @@
     background-color: #00000023;
     padding: 1rem 1rem;
     border-radius: 22px;
-    width: 480px;
+    width: 450px;
     height: 280px;
 }
 
@@ -100,8 +100,8 @@
     background-color: #00000023;
     padding: 1rem 1rem;
     border-radius: 22px;
-    width: 480px;
-    height: 280px;
+    width: 450px;
+    height: 250px;
 }
 
 .about-wrappperr {
@@ -218,5 +218,80 @@
     .about-cards {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+}
+
+
+
+/* === Extra Responsive Tweaks === */
+@media (max-width: 768px) {
+
+    /* Generic section wrapper */
+    .about-wrapper,
+    .about-wrapper2,
+    .about-wrappperr {
+        width: 95%;
+        max-width: 600px;
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+        left: 0;
+        right: 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Stack text and images vertically */
+    .we-text {
+        width: 100%;
+        order: 2;
+        /* ensure text comes after image if desired */
+    }
+
+    .about-human {
+        position: relative;
+        width: 70%;
+        max-width: 250px;
+        margin: 1rem auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        order: 1;
+    }
+
+    /* Tighter typography for small screens */
+    .we-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .we-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .we-text p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* Founder section adjustments */
+    .founder-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .founder-img img {
+        width: 70%;
+        max-width: 250px;
+        margin-bottom: 1rem;
+    }
+
+    /* Cards: single column on phones */
+    .about-cards {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 1rem;
     }
 }

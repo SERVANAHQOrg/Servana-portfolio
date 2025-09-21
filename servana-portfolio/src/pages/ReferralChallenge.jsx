@@ -90,7 +90,7 @@ export default function ReferralChallenge() {
       <div className="cta-banner" data-aos="fade-up" data-aos-duration="1000">
         Servana isn’t just an app. It’s a movement of families, workers, and neighbors coming together to care for what matters most.
         <div className="hero-cta-buttons">
-          <button className="btn-primary" onClick={goToSubscriptions}>Start Your Membership</button>
+          <button className="btn-secondary" onClick={goToSubscriptions}>Start Your Membership</button>
         </div>
       </div>
     </section>

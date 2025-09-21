@@ -10,34 +10,6 @@
     color: #22C55E;
 }
 
-/* Filter buttons */
-.service-filters {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
-}
-
-.service-filters button {
-    background: #f5f7f8;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.service-filters .active {
-    background: #22C55E;
-    color: #fff;
-}
-
-.service-filters button:hover {
-    background: #22C55E;
-    color: #fff;
-}
 
 /* Service grid */
 .service-grid {

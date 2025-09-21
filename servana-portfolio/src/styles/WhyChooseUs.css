@@ -1,116 +1,72 @@
 .why-section {
-    background: #22C55E;
-    padding: 70px 10%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 4rem 1.5rem;
+    background: #ffffff;
 }
 
-.why-container {
+.why-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 3rem;
+}
+
+.why-cards {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-    max-width: 1200px;
-    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
     margin: 0 auto;
-    flex-wrap: wrap;
 }
 
-.why-text {
-    flex: 1 1 300px;
-    min-width: 280px;
-}
-
-.why-text h2 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.why-text .tagline {
-    display: inline-block;
-    background: white;
-    color: #22C55E;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-}
-
-.why-text p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-top: 15px;
-}
-
-.why-image {
-    flex: 1 1 320px;
+.why-card {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+    align-items: flex-start;
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
 }
 
-.why-image img {
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
-    border: 2px solid whitesmoke;
-    border-radius: 30% 70% 70% 30% / 40% 30% 70% 60%;
-    animation: morph 8s ease-in-out infinite;
+.why-card:hover {
+    transform: translateY(-4px);
 }
 
-/* Morphing blob animation */
-@keyframes morph {
-    0% {
-        border-radius: 30% 70% 70% 30% / 40% 30% 70% 60%;
-    }
-
-    33% {
-        border-radius: 50% 50% 70% 30% / 30% 40% 60% 70%;
-    }
-
-    66% {
-        border-radius: 60% 40% 40% 60% / 50% 60% 40% 50%;
-    }
-
-    100% {
-        border-radius: 30% 70% 70% 30% / 40% 30% 70% 60%;
-    }
+/* Alternate background for every second card */
+.why-card.alt-bg {
+    background: #f0fdf4;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .why-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .why-text h2 {
-        font-size: 2.2rem;
-        text-align: center;
-    }
-
-    .why-text p {
-        font-size: 1rem;
-        text-align: center;
-    }
+.why-icon {
+    font-size: 2.2rem;
+    color: #16a34a;
+    margin-right: 1rem;
+    flex-shrink: 0;
 }
 
-@media (max-width: 480px) {
-    .why-text h2 {
-        font-size: 1.8rem;
+.why-info h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.25rem;
+    color: #111827;
+}
+
+.why-info p {
+    margin: 0;
+    color: #374151;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+    .why-card {
+        flex-direction: row;
+        padding: 1.2rem;
     }
 
-    .why-text p {
-        font-size: 0.95rem;
-    }
-
-    .why-image img {
-        width: 260px;
-        height: 260px;
+    .why-icon {
+        font-size: 2rem;
+        margin-right: 0.8rem;
     }
 }

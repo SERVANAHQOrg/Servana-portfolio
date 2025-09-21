@@ -1,7 +1,9 @@
-/* ReferralPage.css */
-
+/* === Referral Page Base === */
 .referral-page {
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* stop accidental sideways scroll */
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -14,23 +16,36 @@
 .ref-wrapperrr {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    /* wrap on small screens */
     align-items: center;
     justify-content: space-between;
-    gap: 6rem;
-    max-width: 1800px;
+    gap: 3rem;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .ref-wrapperrr p {
     font-size: 20px;
-    right: -40px;
 }
 
 .header {
     font-size: 60px;
     color: #22c55e;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     padding-top: 0;
     line-height: 1.2;
+}
+
+/* Make hero image always fill its box */
+.ref-wrapperrr img.ref-humann {
+    width: 100%;
+    height: auto;
+    max-width: 550px;
+    /* desktop max */
+    border-radius: 1rem;
+    object-fit: cover;
 }
 
 /* Hero CTA buttons */
@@ -74,32 +89,8 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
 }
 
-/* Alternate layout */
 .ref-wrapper2 {
     flex-direction: row-reverse;
-}
-
-/* Layered background effect */
-.ref-layer {
-    position: absolute;
-    border-radius: 1.5rem;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-.layerrr1 {
-    background-color: #e0f2ff;
-    transform: rotate(-2deg);
-    z-index: 1;
-}
-
-.layerrr2 {
-    background-color: #cce6ff;
-    transform: rotate(2deg);
-    z-index: 2;
 }
 
 /* Text section */
@@ -122,15 +113,6 @@
     color: #333;
 }
 
-.ref-text ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-}
-
-.ref-text ul li {
-    margin-bottom: 0.5rem;
-}
-
 /* === Cards for Tiers === */
 .ref-tier-card {
     background-color: #f1f9ff;
@@ -151,7 +133,7 @@
     box-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
 }
 
-/* Image section */
+/* Image section inside other tiers */
 .ref-human {
     position: relative;
     z-index: 3;
@@ -177,21 +159,10 @@
     margin-top: 1.5rem;
 }
 
-/* Animation on scroll */
-[data-aos] {
-    opacity: 0;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-[data-aos].aos-animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Floating animation for images */
 @keyframes float {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 
     50% {
@@ -199,7 +170,7 @@
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
 }
 
@@ -211,7 +182,7 @@
     animation: float 5s ease-in-out infinite;
 }
 
-/* Responsive */
+/* === Responsive === */
 @media (max-width: 1024px) {
 
     .ref-wrapper,
@@ -245,12 +216,19 @@
 
     .ref-wrapper,
     .ref-wrapper2 {
-        left: 0;
-        right: 0;
         padding: 1.5rem 1rem;
     }
 
     .ref-text {
         text-align: center;
+    }
+
+    /* ✅ Full-width hero image on mobile */
+    .ref-wrapperrr img.ref-humann {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+        /* optional: remove corner rounding for edge-to-edge */
     }
 }

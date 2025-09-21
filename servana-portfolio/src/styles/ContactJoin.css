@@ -1,0 +1,135 @@
+.contact-join {
+    position: relative;
+    /* so sticky children know their container */
+    padding: 4rem 1.5rem;
+    background: #f9fafb;
+    text-align: center;
+}
+
+.contact-join h2 {
+    font-size: 2rem;
+    color: #16a34a;
+    margin-bottom: 2rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Contact form styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.send-btn {
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.send-btn:hover {
+    background: #15803d;
+}
+
+/* Worker signup block */
+.join-block {
+    background: #ecfdf5;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.join-block h3 {
+    font-size: 1.5rem;
+    color: #16a34a;
+    margin-bottom: 0.5rem;
+}
+
+.join-block p {
+    margin-bottom: 1rem;
+    color: #374151;
+}
+
+.join-btn {
+    background: #16a34a;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.join-btn:hover {
+    background: #15803d;
+}
+
+/* ===== Quick Contact Icons (sticky inside section) ===== */
+.quick-icons {
+    position: sticky;
+    /* follows scroll but stops at section bottom */
+    bottom: 20px;
+    /* 20px from viewport bottom while scrolling */
+    right: 20px;
+    /* keep right-aligned within the section */
+    margin-left: auto;
+    /* pushes it to the right if section is centered */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: fit-content;
+    z-index: 10;
+}
+
+.quick-icons a {
+    background: #16a34a;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+}
+
+.quick-icons a:hover {
+    transform: scale(1.1);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

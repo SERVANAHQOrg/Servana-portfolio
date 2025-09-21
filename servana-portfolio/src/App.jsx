@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
-import Contact from "./components/Contact";
+import ContactJoin from "./components/ContactJoin";
 import Footer from "./components/Footer";
 import "./index.css";
 import WhyChooseUs from "./components/WhyChooseUs";
@@ -14,6 +14,9 @@ import "aos/dist/aos.css";
 import Dyk from "./components/Dyk";
 import ReferralChallenge from "./pages/ReferralChallenge";
 import SubscriptionPage from "./pages/SubscriptionPage";
+import CommunityImpact from "./components/CommunityImpact";
+import HowItWorks from "./components/HowItWorks";
+import AboutIntro from "./components/AboutIntro";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,16 +38,19 @@ function App() {
           element={
             <>
               <Hero />
-              <WhyChooseUs />
-              <About />
               <Services />
+              <HowItWorks/>
+              <WhyChooseUs />
+              <CommunityImpact/>
+              <AboutIntro/>
               <Dyk />
-              <Contact />
+              <ContactJoin />
             </>
           }
         />
         <Route path="/referral" element={<ReferralChallenge />} />
         <Route path="/subscriptions" element={<SubscriptionPage />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </>

@@ -1,0 +1,67 @@
+.how-it-works {
+    padding: 4rem 2rem;
+    background: #f0fdf4;
+    /* soft green background */
+    text-align: center;
+}
+
+.hiw-title {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 2.5rem;
+}
+
+/* Steps grid */
+.hiw-steps {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto 3rem auto;
+}
+
+.hiw-step {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s;
+}
+
+.hiw-step:hover {
+    transform: translateY(-4px);
+}
+
+.hiw-icon {
+    font-size: 2.5rem;
+    color: #16a34a;
+    margin-bottom: 1rem;
+}
+
+.hiw-step h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+}
+
+.hiw-step p {
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+/* CTA button */
+.hiw-cta {
+    background: #16a34a;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.9rem 2.2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.hiw-cta:hover {
+    background: #15803d;
+}
