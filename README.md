@@ -62,4 +62,4 @@ Created by **Rooney Kassim**
 [GitHub](https://github.com/Kassim999999) | [LinkedIn](https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=rooney-kassim-89b731384) | [Email](mailto:kassimrooneyinc@gmail.com)
 
 ## License
-MIT License © 2025 Rooney Kassim.
+MIT License © 2025 Rooney Kassim
