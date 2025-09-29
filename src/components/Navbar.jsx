@@ -40,24 +40,25 @@ function Navbar() {
         <img src={logo} alt="Servana Logo" className="logo-icon" />
         <span className="brand-name">Servana</span>
       </div>
-      <ul className={open ? "nav-links open" : "nav-links"}>
-        <li className='tooltip' onClick={() => handleScroll("hero")}>
-          <i className="fa-regular fa-house"></i>
-          <span className="tooltiptext">Home</span>
-        </li>
-        <li className='tooltip' onClick={() => handleScroll("about")}>
-          <i className="fa-regular fa-lightbulb"></i>
-          <span className="tooltiptext">About</span>
-        </li>
-        <li className='tooltip' onClick={() => handleScroll("services")}>
-          <i className="fa-solid fa-hand-holding-heart"></i>
-          <span className="tooltiptext">Services</span>
-        </li>
-        <li className='tooltip' onClick={() => handleScroll("contact")}>
-          <i className="fa-solid fa-phone"></i>
-          <span className="tooltiptext">Contact</span>
-        </li>
-      </ul>
+<ul className={open ? "nav-links open" : "nav-links"}>
+  <li onClick={() => handleScroll("hero")}>
+    <i className="fa-regular fa-house"></i>
+    <span className="link-text">Home</span>
+  </li>
+  <li onClick={() => handleScroll("about")}>
+    <i className="fa-regular fa-lightbulb"></i>
+    <span className="link-text">About</span>
+  </li>
+  <li onClick={() => handleScroll("services")}>
+    <i className="fa-solid fa-hand-holding-heart"></i>
+    <span className="link-text">Services</span>
+  </li>
+  <li onClick={() => handleScroll("contact")}>
+    <i className="fa-solid fa-phone"></i>
+    <span className="link-text">Contact</span>
+  </li>
+</ul>
+
       <button className="menu-toggle" onClick={() => setOpen(!open)}>
         ☰
       </button>

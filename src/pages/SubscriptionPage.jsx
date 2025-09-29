@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/SubscriptionPage.css";
-import StarterImg from "../assets/decoy.png";
-import PlusImg from "../assets/decoy.png";
-import EliteImg from "../assets/decoy.png";
+import StarterImg from "../assets/start.svg";
+import PlusImg from "../assets/mid.svg";
+import EliteImg from "../assets/super.svg";
 
 export default function SubscriptionPage() {
   return (
