@@ -1,18 +1,34 @@
 import "../styles/Footer.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6"; // X icon
+import { FaXTwitter } from "react-icons/fa6";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/servanalogo.png";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleScroll = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/", { replace: false });
+      setTimeout(() => {
+        const section = document.getElementById(id);
+        if (section) section.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    } else {
+      const section = document.getElementById(id);
+      if (section) section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <footer className="footer">
       {/* LEFT: Links + Socials */}
       <div className="footer-left">
         <nav className="footer-links">
-          <a href="/about">About</a>
-          <a href="/services">Services</a>
+          <a onClick={() => handleScroll("about")}>About</a>
+          <a onClick={() => handleScroll("services")}>Services</a>
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
         </nav>

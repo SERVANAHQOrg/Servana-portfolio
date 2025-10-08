@@ -2,6 +2,9 @@
 import { useState } from "react";
 import "../styles/ContactJoin.css";
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function ContactJoin() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -14,6 +17,16 @@ export default function ContactJoin() {
     alert(`Thanks ${form.name}! We received your message.`);
     setForm({ name: "", email: "", message: "" });
   };
+
+
+    const handleComingSoon = () => {
+      toast.info("Coming soon!", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        theme: "colored",
+      });
+    };
 
   return (
     <section id="contact" className="contact-join">
@@ -37,16 +50,18 @@ export default function ContactJoin() {
             Skilled professional? Join Servana and grow your business with
             verified, trusted clients.
           </p>
-          <button className="join-btn">Join Servana Pro</button>
+          <button className="join-btn" onClick={handleComingSoon}>Join Servana Pro</button>
         </div>
       </div>
 
       {/* Sticky icons INSIDE the section */}
       <div className="quick-icons">
-        <a href="https://wa.me/254700000000" aria-label="WhatsApp"><FaWhatsapp/></a>
-        <a href="tel:+254700000000" aria-label="Phone"><FaPhoneAlt/></a>
+        <a href="https://wa.me/254715429924" aria-label="WhatsApp"><FaWhatsapp/></a>
+        <a href="tel:+254715429924" aria-label="Phone"><FaPhoneAlt/></a>
         <a href="mailto:info@servana.com" aria-label="Email"><FaEnvelope/></a>
       </div>
+
+      <ToastContainer />
     </section>
   );
 }

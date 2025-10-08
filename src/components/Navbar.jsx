@@ -45,7 +45,10 @@ function Navbar() {
     <i className="fa-regular fa-house"></i>
     <span className="link-text">Home</span>
   </li>
-  <li onClick={() => handleScroll("about")}>
+  <li onClick={() => { 
+    navigate("/about");
+    setOpen(false);
+  }}>
     <i className="fa-regular fa-lightbulb"></i>
     <span className="link-text">About</span>
   </li>

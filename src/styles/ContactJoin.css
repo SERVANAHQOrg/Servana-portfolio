@@ -133,3 +133,10 @@
         grid-template-columns: 1fr;
     }
 }
+
+
+.Toastify__toast--info {
+    background-color: #22c55e !important;
+    color: #fff !important;
+    font-weight: 800;
+}

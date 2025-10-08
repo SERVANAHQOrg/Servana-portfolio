@@ -3,8 +3,21 @@ import "../styles/SubscriptionPage.css";
 import StarterImg from "../assets/start.svg";
 import PlusImg from "../assets/mid.svg";
 import EliteImg from "../assets/super.svg";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function SubscriptionPage() {
+
+
+  const handleComingSoon = () => {
+    toast.info("Coming soon!", {
+      position: "bottom-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      theme: "colored",
+    });
+  };
+
   return (
     <section className="subscription-page">
 
@@ -14,7 +27,7 @@ export default function SubscriptionPage() {
           <h1>The Servana Movement Begins Now</h1>
           <p>Choose your place in the movement and enjoy the care you deserve.</p>
           <div className="sub-cta-buttons">
-            <button className="btn-primary">Start Membership</button>
+            <button className="btn-primary" onClick={handleComingSoon}>Start Membership</button>
           </div>
         </div>
       </div>
@@ -32,7 +45,6 @@ export default function SubscriptionPage() {
             <li>Standard booking support</li>
             <li>Entry into the Servana community</li>
           </ul>
-          <button className="btn-primary">Choose Starter</button>
         </div>
 
         {/* Plus (Most Popular) */}
@@ -45,7 +57,6 @@ export default function SubscriptionPage() {
             <li>Discounted convenience fees</li>
             <li>Free monthly home check-up</li>
           </ul>
-          <button className="btn-primary">Choose Plus</button>
         </div>
 
         {/* Elite */}
@@ -58,10 +69,11 @@ export default function SubscriptionPage() {
             <li>Exclusive offers & partner perks</li>
             <li>Free family wellness add-ons</li>
           </ul>
-          <button className="btn-primary">Choose Elite</button>
         </div>
 
       </div>
+
+      <ToastContainer />
     </section>
   );
 }

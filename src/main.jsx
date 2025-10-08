@@ -12,4 +12,21 @@ createRoot(document.getElementById('root')).render(
       <App />
     </BrowserRouter>
   </StrictMode>,
+
+  console.log(`
+ $$$$$$\   $$$$$$\  $$\   $$\ 
+$$  __$$\ $$  __$$\ $$ | $$  |
+$$ /  $$ |$$ /  $$ |$$ |$$  / 
+\$$$$$$$ |\$$$$$$$ |$$$$$  /  
+ \____$$ | \____$$ |$$  $$<   
+$$\   $$ |$$\   $$ |$$ |\$$\  
+\$$$$$$  |\$$$$$$  |$$ | \$$\ 
+ \______/  \______/ \__|  \__|
+                              
+                              
+                              
+
+💻 Designed & Built by Rooney Kassim
+🌐 mail: kassimrooneyinc@gmail.com
+`)
 );

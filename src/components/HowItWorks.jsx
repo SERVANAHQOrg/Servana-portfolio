@@ -1,5 +1,8 @@
 import "../styles/HowItWorks.css";
 import { FaListAlt, FaCalendarCheck, FaUserCheck } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 export default function HowItWorks() {
   const steps = [
@@ -20,6 +23,16 @@ export default function HowItWorks() {
     },
   ];
 
+
+  const handleComingSoon = () => {
+    toast.info("Coming soon!", {
+      position: "bottom-center",
+      autoClose: 2000,
+      hideProgressBar: true,
+      theme: "colored",
+    });
+  };
+
   return (
     <section className="how-it-works">
       <h2 className="hiw-title">How It Works</h2>
@@ -34,7 +47,9 @@ export default function HowItWorks() {
         ))}
       </div>
 
-      <button className="hiw-cta">Start Now</button>
+      <button className="hiw-cta" onClick={handleComingSoon}>Start Now</button>
+
+      <ToastContainer />
     </section>
   );
 }
