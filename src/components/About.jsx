@@ -7,6 +7,7 @@ import PromImg from "../assets/Promise.svg";
 import VisImg from "../assets/vision.svg";
 import WeImg from "../assets/we.svg";
 import WhyImg from "../assets/family-img.svg";
+import ListenImg from "../assets/listen.svg";
 
 function About() {
   const fallbackImg = "https://via.placeholder.com/400x300?text=About+Us";
@@ -96,34 +97,47 @@ function About() {
         <img src={VisImg} alt="Our vision illustration" className="about-human about-human-right" />
       </div>
 
-      {/* === Our Story === */}
-      <div className="about-wrappperr">
-        <div className="about-layerr layerrr1"></div>
-        <div className="about-layerr layerrr2"></div>
-      
+{/* === Our Story (Updated Style) === */}
+<div className="about-story" data-aos="fade-up" data-aos-duration="1200">
+  <h3>Our Story</h3>
 
-        <div className="we-text" data-aos="fade-up" data-aos-duration="1000">
-          <h3>Our Story</h3>
-          <p>
-            It began with a question
-            Why is it so hard to find someone trustworthy when you need them most? Families across Nairobi faced the same frustrations — unreliable workers, safety concerns, and inconsistent service.
-            <br /><br />
-            Born in Nairobi
-            We started in one of Nairobi’s vibrant residential estates, Nyayo Estate, listening to the needs of households who wanted more than just a quick fix — they wanted trust, care, and reliability.
-            <br /><br />
-            The Spark
-            From that challenge came an idea: build not just another app, but a trusted ecosystem where families feel secure and service providers feel empowered.
-            <br /><br />
-            The Movement
-            Servana is more than a marketplace. It’s a movement of vetted professionals, seamless technology, and communities strengthened through trust and care.
-            <br /><br />
-            The Future
-            Our story is still unfolding. With every home we serve, we move closer to a world where convenience meets reliability, and where communities across Africa thrive together.
-            <br /><br />
-            “Servana: Built on trust. Growing with communities.”
-          </p>
-        </div>
-      </div>
+  <div className="story-inner">
+    <div className="story-text">
+      <p>
+        <strong>It began with a question:</strong><br />
+        Why is it so hard to find someone trustworthy when you need them most?
+        Families across Nairobi faced the same frustrations — unreliable
+        workers, safety concerns, and inconsistent service.
+      </p>
+
+      <p>
+        <strong>Born in Nairobi, built for communities everywhere.</strong><br />
+        Servana started in Nyayo Estate, listening to families who wanted more
+        than just a quick fix — they wanted trust, care, and reliability.
+      </p>
+
+      <p>
+        <strong>The Spark → The Movement</strong><br />
+        What began as an idea has become a movement of vetted professionals,
+        seamless technology, and communities strengthened through trust and
+        care.
+      </p>
+
+      <p className="story-quote">
+        “Servana: Built on trust. Growing with communities.”
+      </p>
+
+      <button className="story-btn" onClick={() => alert("Coming soon!")}>
+        Join the Movement
+      </button>
+    </div>
+
+    <div className="story-image">
+      <img src={ListenImg} alt="Servana Story" />
+    </div>
+  </div>
+</div>
+
 
       <div className="about-img" data-aos="zoom-in" data-aos-duration="1000">
         {/* <img src={safeImg} alt="About Servana" /> */}
@@ -140,9 +154,9 @@ function About() {
           </div>
           <div className="founder-text" data-aos="fade-left" data-aos-delay="500">
             <h2>Meet Our Founder</h2>
-            <span className="founder-tag">Mr Stephen Mambo as CEO Founder</span>
+            <span className="founder-tag">Stephen Mambo as CEO Founder</span>
             <p> 
-              At the heart of Servana is Steph en Mambo, our Founder & CEO — a dreamer turned builder who believed that trust, care, and technology could come together to transform how homes across Africa experience everyday life. <br /><br /> From Nairobi’s vibrant communities came his vision: to create a platform that doesn’t just connect people to services, but uplifts families, empowers workers, and strengthens communities. <br /><br /> Guided by empathy and driven by innovation, Steph embodies Servana’s spirit — bold, human, and unshakably committed to building a future where every home feels cared for and every professional feels valued. <br /><br /> “I started Servana because every family deserves peace of mind, and every worker deserves dignity. This is more than business — it’s a movement.”
+              At the heart of Servana is Stephen Mambo, our Founder & CEO — a dreamer turned builder who believed that trust, care, and technology could come together to transform how homes across Africa experience everyday life. <br /><br /> From Nairobi’s vibrant communities came his vision: to create a platform that doesn’t just connect people to services, but uplifts families, empowers workers, and strengthens communities. <br /><br /> Guided by empathy and driven by innovation, Steph embodies Servana’s spirit — bold, human, and unshakably committed to building a future where every home feels cared for and every professional feels valued. <br /><br /> “I started Servana because every family deserves peace of mind, and every worker deserves dignity. This is more than business — it’s a movement.”
                </p>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import "../styles/Hero.css";
-import skyline from "../assets/Nairobi.png";
+import skyline from "../assets/Nairobii.jpeg";
 import peace from "../assets/peace.svg";
 
 export default function Hero() {

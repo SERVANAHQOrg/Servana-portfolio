@@ -1,4 +1,3 @@
-/* Splash.css – Animated Logo Reveal */
 .splash {
     position: fixed;
     inset: 0;
@@ -16,26 +15,29 @@
     pointer-events: none;
 }
 
-/* Logo animation */
+
 .logo-animate {
-    width: 120px;
-    max-width: 30%;
+    width: 380px;
+    max-width: 100%;
     animation: popIn 1.5s ease forwards;
     filter: drop-shadow(0 0 12px #22c55e);
 }
 
-/* Tagline animation */
-.tagline {
-    margin-top: 1rem;
-    color: #fff;
-    font-family: "Poppins", sans-serif;
-    text-align: center;
-    font-size: 1rem;
+
+.splash .tagline {
+    margin-top: 1rem !important;
+    color: #fff !important;
+    font-family: "Poppins", sans-serif !important;
+    text-align: center !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px;
+    line-height: 1.1;
     opacity: 0;
     animation: fadeUp 1.5s 1s forwards;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
-/* Pop-in animation */
 @keyframes popIn {
     0% {
         transform: scale(0.7);
@@ -59,20 +61,20 @@
 /* === Responsive adjustments === */
 @media (max-width: 768px) {
     .logo-animate {
-        width: 90px;
+        width: 250px;
     }
 
-    .tagline {
-        font-size: 0.9rem;
+    .splash .tagline {
+        font-size: 3rem !important;
     }
 }
 
 @media (max-width: 480px) {
     .logo-animate {
-        width: 70px;
+        width: 180px;
     }
 
-    .tagline {
-        font-size: 0.8rem;
+    .splash .tagline {
+        font-size: 2rem !important;
     }
 }

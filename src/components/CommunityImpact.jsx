@@ -1,5 +1,5 @@
 import "../styles/CommunityImpact.css";
-import estate from "../assets/estate.jpg"; // add a suitable image
+import estate from "../assets/estate.jpeg"; // add a suitable image
 import { useState } from "react";
 
 const testimonials = [

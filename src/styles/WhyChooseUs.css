@@ -22,7 +22,7 @@
 .why-card {
     display: flex;
     align-items: flex-start;
-    background: #ffffff;
+    background: #f0fdf4;
     border-radius: 1rem;
     padding: 1.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);

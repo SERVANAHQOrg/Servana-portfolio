@@ -5,83 +5,98 @@
 }
 
 .services h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
     color: #22C55E;
 }
 
-
-/* Service grid */
+/* Grid: 3 columns desktop */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 2rem;
-    max-width: 900px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    width: 100%;
+    max-width: 1200px;
     margin: auto;
+    justify-items: center;
 }
 
-/* Individual service item */
+/* Service Card */
 .service-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
     color: #22C55E;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    height: 100%;
 }
 
 .service-item:hover {
-    transform: translateY(-4px);
-    color: #16a34a;
+    transform: translateY(-6px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .service-item svg {
-    font-size: 2.5rem;
-    color: inherit;
-    /* follows the text color for hover effect */
-    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    color: #22C55E;
 }
 
-.service-item:hover svg {
-    transform: scale(1.2);
+.service-item p {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #22C55E;
 }
 
-/* === Responsive adjustments === */
-@media (max-width: 768px) {
+.service-item span {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.4;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
     .service-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns for mobile + tablet */
+        gap: 1.8rem;
     }
 
     .service-item {
+        padding: 1.6rem;
+    }
+
+    .service-item svg {
+        font-size: 2.4rem;
+    }
+
+    .service-item p {
         font-size: 1.1rem;
+    }
+}
+
+/* Smallest screens — still 2 columns */
+@media (max-width: 480px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .service-item {
+        padding: 1.4rem 1rem;
     }
 
     .service-item svg {
         font-size: 2rem;
     }
-}
 
-@media (max-width: 480px) {
-    .services {
-        padding: 3rem 1rem;
-    }
-
-    .service-filters {
-        gap: 0.6rem;
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 1rem;
-    }
-
-    .service-item {
-        font-size: 1rem;
-    }
-
-    .service-item svg {
-        font-size: 1.8rem;
+    .service-item span {
+        font-size: 0.9rem;
     }
 }

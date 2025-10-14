@@ -27,7 +27,7 @@ export default function Footer() {
       {/* LEFT: Links + Socials */}
       <div className="footer-left">
         <nav className="footer-links">
-          <a onClick={() => handleScroll("about")}>About</a>
+          <a onClick={() => navigate("/about")}>About</a>
           <a onClick={() => handleScroll("services")}>Services</a>
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>

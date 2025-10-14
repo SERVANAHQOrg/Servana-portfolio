@@ -27,7 +27,7 @@ export default function SubscriptionPage() {
           <h1>The Servana Movement Begins Now</h1>
           <p>Choose your place in the movement and enjoy the care you deserve.</p>
           <div className="sub-cta-buttons">
-            <button className="btn-primary" onClick={handleComingSoon}>Start Membership</button>
+            <button className="button-primary" onClick={handleComingSoon}>Start Membership</button>
           </div>
         </div>
       </div>

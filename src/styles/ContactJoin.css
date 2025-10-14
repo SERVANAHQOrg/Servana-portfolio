@@ -41,18 +41,19 @@
 }
 
 .send-btn {
-    background: #16a34a;
+    background: #22c55e;
     color: #fff;
     border: none;
     padding: 0.75rem;
-    border-radius: 8px;
+    border-radius: 999px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.2s;
 }
 
 .send-btn:hover {
-    background: #15803d;
+    background: #000000;
+    color: #22c55e;
 }
 
 /* Worker signup block */
@@ -68,7 +69,7 @@
 
 .join-block h3 {
     font-size: 1.5rem;
-    color: #16a34a;
+    color: #22c55e;
     margin-bottom: 0.5rem;
 }
 
@@ -78,7 +79,7 @@
 }
 
 .join-btn {
-    background: #16a34a;
+    background: #22c55e;
     color: #fff;
     padding: 0.75rem 1.5rem;
     border: none;
@@ -89,7 +90,8 @@
 }
 
 .join-btn:hover {
-    background: #15803d;
+    background: #000000;
+    color: #22c55e;
 }
 
 /* ===== Quick Contact Icons (sticky inside section) ===== */
@@ -110,7 +112,7 @@
 }
 
 .quick-icons a {
-    background: #16a34a;
+    background: #22c55e;
     color: #fff;
     width: 44px;
     height: 44px;
@@ -125,6 +127,8 @@
 
 .quick-icons a:hover {
     transform: scale(1.1);
+    background-color: #000000;
+    color: #22c55e;
 }
 
 /* ===== Responsive ===== */

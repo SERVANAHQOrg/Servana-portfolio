@@ -19,13 +19,13 @@
 }
 
 .logo-icon {
-    width: 52px;
-    height: 52px;
+    width: 112px;
+    height: 92px;
     object-fit: contain;
 }
 
 .brand-name {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #22C55E;
 }
 
@@ -60,7 +60,7 @@
 
 /* Scroll effect */
 .navbar.scrolled {
-    background-color: #00000056;
+    background-color: #000000c7;
     box-shadow: 0 2px 8px rgba(34, 197, 94, 0.6);
 }
 

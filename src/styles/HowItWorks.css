@@ -52,7 +52,7 @@
 
 /* CTA button */
 .hiw-cta {
-    background: #16a34a;
+    background: #22c55e;
     color: #fff;
     border: none;
     border-radius: 999px;
@@ -63,7 +63,8 @@
 }
 
 .hiw-cta:hover {
-    background: #15803d;
+    background: #000;
+    color: #22c55e;
 }
 
 .Toastify__toast--info {
