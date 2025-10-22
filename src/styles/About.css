@@ -13,9 +13,9 @@
     display: inline-block;
     color: #22C55E;
     font-weight: bold;
+    font-size: 3rem;
     margin-bottom: 1rem;
     padding: 6px 12px;
-    text-decoration: underline;
 }
 
 .we-text h2 {

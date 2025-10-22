@@ -17,6 +17,11 @@ import SubscriptionPage from "./pages/SubscriptionPage";
 import CommunityImpact from "./components/CommunityImpact";
 import HowItWorks from "./components/HowItWorks";
 import AboutIntro from "./components/AboutIntro";
+import HomeStory from "./components/HomeStory";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import Cookies from "./pages/Cookies";
+import Blog from "./components/Blog";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -38,12 +43,14 @@ function App() {
           element={
             <>
               <Hero />
+              <HomeStory />
               <Services />
               <HowItWorks/>
               <WhyChooseUs />
               <CommunityImpact/>
               <AboutIntro/>
               <Dyk />
+              <Blog />
               <ContactJoin />
             </>
           }
@@ -51,6 +58,9 @@ function App() {
         <Route path="/referral" element={<ReferralChallenge />} />
         <Route path="/subscriptions" element={<SubscriptionPage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/cookies" element={<Cookies />} />
       </Routes>
       <Footer />
     </>

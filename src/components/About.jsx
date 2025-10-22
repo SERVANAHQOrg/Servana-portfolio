@@ -1,6 +1,5 @@
 import "../styles/About.css";
 import "../styles/Founder.css";
-import aboutImg from "../assets/corporate.jpg";
 import founderImg from "../assets/founder.jpeg";
 import AbtImg from "../assets/Abt-img.svg";
 import PromImg from "../assets/Promise.svg";
@@ -10,8 +9,6 @@ import WhyImg from "../assets/family-img.svg";
 import ListenImg from "../assets/listen.svg";
 
 function About() {
-  const fallbackImg = "https://via.placeholder.com/400x300?text=About+Us";
-  const safeImg = aboutImg || fallbackImg;
 
   return (
     <section id="about" className="about">
@@ -25,11 +22,9 @@ function About() {
         <div className="we-text" data-aos="fade-up" data-aos-duration="1000">
           <h2>About Us</h2>
           <p>
-            Your Home, Our Care
-
             At Servana, we believe a home is more than walls and rooms — it’s where life happens. Our mission is to make everyday living easier, safer, and more enjoyable by connecting households with trusted, vetted professionals who deliver excellence at every doorstep.
-            <br /><br />
-            Our mission is to provide convenient, reliable, and high-quality service solutions for your home or workplace.
+            
+            Our mission is to provide convenient, reliable, and high-quality service solutions for your home.
           </p>
         </div>
 
@@ -123,8 +118,16 @@ function About() {
         care.
       </p>
 
+      <p>
+        <strong>The Future</strong><br />
+        Our story is still unfolding. With every home we serve, we move closer
+        to a world where convenience meets reliability, and where communities
+        across Africa thrive together.
+      </p>
+
       <p className="story-quote">
-        “Servana: Built on trust. Growing with communities.”
+        “Servana isn't just a service platform --- it's a movement of trust, respect, and connection.
+         Together, we're redefining what it means to serve.”
       </p>
 
       <button className="story-btn" onClick={() => alert("Coming soon!")}>
@@ -139,9 +142,6 @@ function About() {
 </div>
 
 
-      <div className="about-img" data-aos="zoom-in" data-aos-duration="1000">
-        {/* <img src={safeImg} alt="About Servana" /> */}
-      </div>
 
       {/* Founder section unchanged */}
       <div className="founder-wrapper">

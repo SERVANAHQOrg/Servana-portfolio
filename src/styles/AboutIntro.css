@@ -1,12 +1,44 @@
+.about-intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    background-color: #f9fafb;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* === Side PNGs === */
+.about-side {
+    flex: 1 1 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-side-img {
+    width: 90%;
+    max-width: 280px;
+    opacity: 0.9;
+    animation: float 6s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.about-side-img:hover {
+    transform: scale(1.05);
+}
+
+/* === Center Card === */
 .about-intro {
     background: linear-gradient(135deg, #f0fdf4, #dcfce7);
     padding: 5rem 1.5rem;
     text-align: center;
     border-radius: 20px;
     max-width: 900px;
-    margin: 3rem auto;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2;
 }
 
 .about-intro:hover {
@@ -14,6 +46,7 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* === Title === */
 .intro-title {
     font-size: 2.2rem;
     color: #22c55e;
@@ -22,6 +55,7 @@
     letter-spacing: 0.5px;
 }
 
+/* === Floating illustration === */
 .intro-illustration-wrapper {
     display: flex;
     justify-content: center;
@@ -33,6 +67,7 @@
     animation: float 5s ease-in-out infinite;
 }
 
+/* === Float keyframes === */
 @keyframes float {
 
     0%,
@@ -45,6 +80,7 @@
     }
 }
 
+/* === Text === */
 .intro-text p {
     max-width: 620px;
     margin: 0.8rem auto;
@@ -55,6 +91,7 @@
     text-justify: inter-word;
 }
 
+/* === Button === */
 .meet-servana-btn {
     margin-top: 2rem;
     background: #22c55e;
@@ -87,4 +124,21 @@
     background: #000;
     color: #22c55e;
     transform: translateY(-3px);
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+    .about-intro-section {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .about-side {
+        display: none;
+        /* Hide sides on mobile */
+    }
+
+    .about-intro {
+        width: 100%;
+    }
 }

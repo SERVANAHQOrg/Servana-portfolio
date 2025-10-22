@@ -1,22 +1,33 @@
 import "../styles/Hero.css";
 import skyline from "../assets/Nairobii.jpeg";
+import logo from "../assets/servanalogo.png"; // ✅ your logo
 import peace from "../assets/peace.svg";
 
 export default function Hero() {
   return (
     <section className="hero-container">
-      {/* Skyline with overlaid heading */}
+      {/* Skyline background */}
       <div className="hero-skyline">
         <img src={skyline} alt="Nairobi skyline" loading="eager" />
-        <h1 className="hero-title">Your Home, Our Care</h1>
+
+        {/* === Overlayed Logo, Name & Tagline === */}
+        <div className="hero-overlay">
+          <img src={logo} alt="Servana logo" className="hero-logo" />
+          <h1 className="hero-name">Servana</h1>
+          <p className="hero-tagline">Your Home. Our Care</p>
+        </div>
       </div>
 
-      {/* Content block with text + image side-by-side */}
+      {/* Content below the hero */}
       <div className="hero-content">
         <div className="hero-text">
           <p>
-            Servana offers more than services—peace and a happy home.
-            Experience trusted care tailored to your needs.
+            In every home, there's a heartbeat —— the quiet rhythm of
+            care that holds everything together. At Servana, we see the
+            unseen heroes of that heartbeat:the women managing
+            homes, the men keeping systems running, the caregivers,
+            cleaners, and fixers who ensure every corner of a house
+            feels alive, safe, and peaceful.
           </p>
         </div>
         <div className="hero-image">
