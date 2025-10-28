@@ -10,6 +10,7 @@
     z-index: 1000;
     background: #000000;
     transition: background 0.3s ease, box-shadow 0.3s ease;
+    height: 90px;
 }
 
 /* Logo */
@@ -21,6 +22,7 @@
 .logo-icon {
     width: 112px;
     height: 92px;
+    margin-bottom: 8px;
     object-fit: contain;
 }
 
