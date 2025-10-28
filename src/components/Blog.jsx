@@ -73,9 +73,9 @@ export default function Blog() {
               Get Inspired
             </button>
           </div>
-          <div className="featured-icon">
+          {/* <div className="featured-icon">
             <FaLightbulb className="icon" />
-          </div>
+          </div> */}
         </div>
 
         {/* === Blog Cards === */}
