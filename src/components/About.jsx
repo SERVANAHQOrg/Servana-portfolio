@@ -1,5 +1,6 @@
 import "../styles/About.css";
 import "../styles/Founder.css";
+import { ToastContainer, toast } from "react-toastify";
 import founderImg from "../assets/founder.jpeg";
 import AbtImg from "../assets/Abt-img.svg";
 import PromImg from "../assets/Promise.svg";
@@ -9,6 +10,15 @@ import WhyImg from "../assets/family-img.svg";
 import ListenImg from "../assets/listen.svg";
 
 function About() {
+
+      const handleComingSoon = () => {
+      toast.info("Coming soon!", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        theme: "colored",
+      });
+    };
 
   return (
     <section id="about" className="about">
@@ -130,7 +140,7 @@ function About() {
          Together, we're redefining what it means to serve.”
       </p>
 
-      <button className="story-btn" onClick={() => alert("Coming soon!")}>
+      <button className="story-btn" onClick={handleComingSoon}>
         Join the Movement
       </button>
     </div>
@@ -161,21 +171,7 @@ function About() {
           </div>
         </div>
       </div>
-
-      <div className="about-cards" data-aos="fade-up" data-aos-duration="1000">
-        <div className="card" data-aos="flip-left" data-aos-delay="200">
-          <h4>What We Do</h4>
-          <p>We connect customers with experienced professionals for a wide range of home service needs.</p>
-        </div>
-        <div className="card" data-aos="flip-left" data-aos-delay="400">
-          <h4>Our Values</h4>
-          <p>We value integrity, customer satisfaction, and continuous improvement.</p>
-        </div>
-        <div className="card" data-aos="flip-left" data-aos-delay="600">
-          <h4>Why Choose Us</h4>
-          <p>We stand out by offering an easy-to-use platform, competitive pricing, and a strict vetting process.</p>
-        </div>
-      </div>
+           <ToastContainer />
     </section>
   );
 }

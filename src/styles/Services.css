@@ -100,3 +100,20 @@
         font-size: 0.9rem;
     }
 }
+
+
+.coming-soon {
+    opacity: 0.5;
+    pointer-events: none;
+    position: relative;
+}
+
+.coming-soon-label {
+    position: absolute;
+    bottom: 10px;
+    right: 120px;
+    color: #22c55e;
+    font-size: 0.95rem;
+    padding: 4px 8px;
+    font-weight: 500;
+}

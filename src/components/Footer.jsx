@@ -33,12 +33,12 @@ export default function Footer() {
           <a href="/terms">Terms</a>
         </nav>
 
-        <div className="footer-social">
+        {/* <div className="footer-social">
           <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF /></a>
           <a href="https://x.com" aria-label="X"><FaXTwitter /></a>
           <a href="https://instagram.com" aria-label="Instagram"><FaInstagram /></a>
           <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedinIn /></a>
-        </div>
+        </div> */}
       </div>
 
       {/* RIGHT: Logo + Tagline + Copy */}

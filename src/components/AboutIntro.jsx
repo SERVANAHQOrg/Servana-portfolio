@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "../styles/AboutIntro.css";
 import aboutIcon from "../assets/story.svg";
-import leftImg from "../assets/decoy.png";
-import rightImg from "../assets/decoy.png";
+import leftImg from "../assets/riba.svg";
+import rightImg from "../assets/vako.svg";
 
 export default function AboutIntro() {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ export default function AboutIntro() {
         <img
           src={leftImg}
           alt="Home cleaning illustration"
-          className="about-side-img"
+          className="about-side-img-l"
         />
       </div>
 
@@ -51,7 +51,7 @@ export default function AboutIntro() {
         <img
           src={rightImg}
           alt="Repair illustration"
-          className="about-side-img"
+          className="about-side-img-r"
         />
       </div>
     </section>

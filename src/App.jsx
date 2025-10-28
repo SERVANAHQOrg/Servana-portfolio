@@ -22,6 +22,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Cookies from "./pages/Cookies";
 import Blog from "./components/Blog";
+import BlogDetail from "./components/BlogDetail";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -61,6 +62,9 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/cookies" element={<Cookies />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/blog/featured" element={<BlogDetail />} />
       </Routes>
       <Footer />
     </>

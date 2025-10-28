@@ -1,0 +1,130 @@
+.blog-detail {
+    background: #f9fbff;
+    min-height: 100vh;
+    padding: 90px 8%;
+    font-family: "Inter", sans-serif;
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+/* === Animation === */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Back Button === */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: white;
+    border: 2px solid #22c55e;
+    color: #22c55e;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
+}
+
+.back-btn:hover {
+    background: #000000;
+    color:#22c55e;
+}
+
+/* === Layout === */
+.blog-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 100px auto;
+}
+
+/* === Image === */
+.detail-image {
+    width: 45%;
+    max-height: 480px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+    object-fit: cover;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* === Text === */
+.detail-text {
+    flex: 1;
+}
+
+.detail-text h1 {
+    font-size: 2.2rem;
+    color: #22c55e;
+    margin-bottom: 10px;
+}
+
+
+.detail-content h3 {
+    color: #848584;
+    margin-top: 25px;
+    font-size: 1.3rem;
+}
+
+.detail-content p,
+.detail-content li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 15px;
+}
+
+.detail-content ul {
+    margin-left: 20px;
+}
+
+/* === Responsive === */
+@media (max-width: 900px) {
+    .blog-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .detail-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .detail-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .blog-detail {
+        padding: 100px 7%;
+    }
+}

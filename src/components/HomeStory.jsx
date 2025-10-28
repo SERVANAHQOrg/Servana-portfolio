@@ -4,8 +4,19 @@ import CustomerImg from "../assets/fam.png";
 import Gallery1 from "../assets/iron.png";
 import Gallery2 from "../assets/serv.png";
 import Gallery3 from "../assets/cli.png";
+import { ToastContainer, toast } from "react-toastify";
 
 export default function HomeStory() {
+
+    const handleComingSoon = () => {
+         toast.info("Coming soon!", {
+           position: "bottom-center",
+           autoClose: 2000,
+           hideProgressBar: true,
+           theme: "colored",
+         });
+       };
+
   return (
     <section className="home-story">
       <div className="story-inner" data-aos="fade-up" data-aos-duration="1000">
@@ -58,10 +69,13 @@ export default function HomeStory() {
 
           {/* CTA */}
           <div className="story-cta">
-            <button className="story-btn">Ready to experience Servana care?</button>
+            <button className="story-btn"  onClick={handleComingSoon}>Ready to experience Servana care?</button>
           </div>
         </div>
       </div>
+
+      <ToastContainer/>
+
     </section>
   );
 }

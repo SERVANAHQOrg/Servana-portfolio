@@ -58,7 +58,7 @@ export default function ContactJoin() {
       <div className="quick-icons">
         <a href="https://wa.me/254715429924" aria-label="WhatsApp"><FaWhatsapp/></a>
         <a href="tel:+254715429924" aria-label="Phone"><FaPhoneAlt/></a>
-        <a href="mailto:info@servana.com" aria-label="Email"><FaEnvelope/></a>
+        <a href="mailto:support@servana.africa" aria-label="Email"><FaEnvelope/></a>
       </div>
 
       <ToastContainer />

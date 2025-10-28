@@ -105,12 +105,12 @@
 
 .blog-img {
     width: 100%;
-    height: 200px;
+    height: 130px;
     object-fit: contain;
     /* keeps the entire animation visible */
     object-position: center;
     display: block;
-    background-color: #f9fafb;
+    background-color: #eaedee;
     /* subtle background for transparent videos */
     border-bottom: 2px solid #22c55e;
     border-radius: 1rem 1rem 0 0;
@@ -127,14 +127,9 @@
     margin-bottom: 0.3rem;
 }
 
-.blog-date {
-    color: #6b7280;
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-}
 
 .blog-summary {
-    color: #22c55e;
+    color: #717472;
     line-height: 1.6;
     font-size: 0.95rem;
     margin-bottom: 1rem;

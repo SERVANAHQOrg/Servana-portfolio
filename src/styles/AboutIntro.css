@@ -17,12 +17,21 @@
     align-items: center;
 }
 
-.about-side-img {
-    width: 90%;
-    max-width: 280px;
+.about-side-img-l {
+    width: 400px;
     opacity: 0.9;
-    animation: float 6s ease-in-out infinite;
+    animation: float 2s ease-in-out infinite;
     transition: transform 0.3s ease;
+    margin-bottom: 320px;
+}
+
+
+.about-side-img-r {
+    width: 400px;
+    opacity: 0.9;
+    animation: float 2s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    margin-top: 250px;
 }
 
 .about-side-img:hover {

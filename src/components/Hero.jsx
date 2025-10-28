@@ -19,17 +19,16 @@ export default function Hero() {
       </div>
 
       {/* Content below the hero */}
-      <div className="hero-content">
-        <div className="hero-text">
-          <p>
-            In every home, there's a heartbeat —— the quiet rhythm of
-            care that holds everything together. At Servana, we see the
-            unseen heroes of that heartbeat:the women managing
-            homes, the men keeping systems running, the caregivers,
-            cleaners, and fixers who ensure every corner of a house
-            feels alive, safe, and peaceful.
-          </p>
-        </div>
+<div className="hero-content">
+  <div className="hero-text">
+    <p>
+      In every home, there's a heartbeat — the quiet rhythm of care that holds everything together.
+    </p>
+    <p>
+      At Servana, we see the unseen heroes of that heartbeat — the women managing homes, the men keeping systems running,
+      the caregivers, cleaners, and fixers who ensure every corner of a house feels alive, safe, and peaceful.
+    </p>
+  </div>
         <div className="hero-image">
           <img src={peace} alt="peace illustration" className="peace-img" />
         </div>
