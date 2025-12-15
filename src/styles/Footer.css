@@ -1,86 +1,179 @@
+/* =========================== FOOTER – WORLD CLASS =========================== */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #111;
-    color: #fff;
-    padding: 2rem;
-    flex-wrap: wrap;
+    position: relative;
+    background: #000000;
+    color: #e5e7eb;
+    padding: 4rem 1.5rem 2rem;
+    overflow: hidden;
 }
 
-/* Left section */
-.footer-left {
+.footer-inner {
+    max-width: 1800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+/* ===== BRAND ===== */
+.footer-brand {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
 }
 
+.footer-logo {
+    width: 90px;
+    margin-left: 30px;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    line-height: 1.4;
+}
+
+/* ===== LINKS ===== */
 .footer-links {
     display: flex;
-    gap: 1.5rem;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-left: 70px;
 }
 
-.footer-links a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
+.footer-links a,
+.footer-links button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 90px;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-align: left;
+    transition: color 0.25s ease;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links button:hover {
     color: #22c55e;
 }
 
+/* ===== SOCIAL ===== */
 .footer-social {
     display: flex;
     gap: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-top: 85px;
+    margin-left: 190px;
 }
 
 .footer-social a {
-    color: #fff;
-    transition: color 0.3s;
+    color: #e5e7eb;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .footer-social a:hover {
     color: #22c55e;
+    transform: translateY(-3px);
 }
 
-/* Right section */
-.footer-right {
-    text-align: right;
+/* ===== BOTTOM BAR ===== */
+.footer-bottom {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #1f2937;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9ca3af;
 }
 
-.footer-logo {
-    width: 80px;
-    height: auto;
-    margin-bottom: 0.5rem;
-    margin-right: 25px;
+/* =========================== FLOATING CONTACT BLOB =========================== */
+.contact-blob {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #22c55e;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    z-index: 5;
+    animation: blobFloat 6s ease-in-out infinite;
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.35);
 }
 
-.tagline {
-    margin: 0.3rem 0;
-    font-size: 0.9rem;
-    color: #ccc;
+.contact-blob:hover {
+    transform: scale(1.08);
+    box-shadow: 0 30px 60px rgba(34, 197, 94, 0.5);
 }
 
-.copy {
-    font-size: 0.8rem;
-    color: #aaa;
+/* Soft glow ripple */
+.contact-blob::after {
+    content: "";
+    position: absolute;
+    width: 220%;
+    height: 220%;
+    top: -60%;
+    left: -60%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.18), transparent 60%);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.5s ease;
 }
 
-/* Responsive */
+.contact-blob:hover::after {
+    transform: scale(1);
+}
+
+/* Floating animation */
+@keyframes blobFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* =========================== RESPONSIVE =========================== */
 @media (max-width: 768px) {
-    .footer {
-        flex-direction: column-reverse;
+    .footer-inner {
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .footer-left {
+    .footer-logo{
+        margin-left: 130px;
+    }
+
+    .footer-links {
         align-items: center;
     }
 
-    .footer-right {
-        text-align: center;
-        margin-bottom: 1.5rem;
+    .footer-social {
+        justify-content: center;
+        margin: 0%;
+    }
+
+    .contact-blob {
+        width: 96px;
+        height: 96px;
+        font-size: 14px;
+        right: 1.25rem;
+        bottom: 3.55rem;
     }
 }

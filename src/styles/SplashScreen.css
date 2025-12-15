@@ -1,3 +1,4 @@
+/* Full Screen Container */
 .splash {
     position: fixed;
     inset: 0;
@@ -5,17 +6,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at center, #22c55e 0%, #0f172a 100%);
+    background: radial-gradient(circle at center, #22c55e 0%, #000000 80%);
     transition: opacity 0.8s ease;
     z-index: 9999;
 }
 
+/* Fade animation when leaving screen */
 .splash.fade-out {
     opacity: 0;
     pointer-events: none;
 }
 
 
+.uso{
+   padding-bottom: 60px;
+}
+
+
+/* Logo Animation */
 .logo-animate {
     width: 380px;
     max-width: 100%;
@@ -23,49 +31,46 @@
     filter: drop-shadow(0 0 12px #22c55e);
 }
 
-
-.splash .tagline {
-    margin-top: 1rem !important;
-    color: #fff !important;
-    font-family: "Poppins", sans-serif !important;
-    text-align: center !important;
-    font-size: 2.5rem !important;
-    font-weight: 700 !important;
+/* Rotating Text */
+.hello-text {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
     letter-spacing: 2px;
-    line-height: 1.1;
+    margin-right: 30px;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(255,255,255,0.4);
     opacity: 0;
-    animation: fadeUp 1.5s 1s forwards;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: fadeInOut 0.4s ease-in-out forwards;
 }
 
+/* Pop-in animation */
 @keyframes popIn {
     0% {
         transform: scale(0.7);
         opacity: 0;
     }
-
     100% {
         transform: scale(1);
         opacity: 1;
     }
 }
 
-/* Fade-up animation */
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(-4px);
-    }
+/* Each greeting fade */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px) scale(0.95); }
+    50% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-10px) scale(1.05); }
 }
 
-/* === Responsive adjustments === */
+/* Responsive */
 @media (max-width: 768px) {
     .logo-animate {
         width: 250px;
     }
-
-    .splash .tagline {
-        font-size: 3rem !important;
+    .hello-text {
+        font-size: 2.3rem;
     }
 }
 
@@ -73,8 +78,9 @@
     .logo-animate {
         width: 180px;
     }
-
-    .splash .tagline {
-        font-size: 2rem !important;
+    .hello-text {
+        font-size: 1.8rem;
     }
 }
+
+

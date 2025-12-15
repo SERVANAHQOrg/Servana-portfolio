@@ -1,7 +1,7 @@
 .services {
     text-align: center;
     padding: 4rem 2rem;
-    background: #fdfdfd;
+    background: linear-gradient(to bottom, #ffffff 10%,#8a8a8ab0 60%,#000000 97%);
 }
 
 .services h2 {
@@ -13,17 +13,19 @@
 /* Grid: 3 columns desktop */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        justify-items: center;
+        position: relative;
+        /* needed for absolute button */
 }
 
 /* Service Card */
 .service-item {
-    background: #fff;
+    background: #000000;
     border-radius: 12px;
     padding: 2rem 1.5rem 2.8rem;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
@@ -55,7 +57,7 @@
 .service-item span {
     display: block;
     font-size: 1rem;
-    color: #444;
+    color: #ffffff;
     line-height: 1.4;
     max-width: 300px;
     margin: 0 auto;
@@ -125,5 +127,181 @@
     .coming-soon-label {
         font-size: 0.75rem;
         bottom: 6px;
+    }
+}
+
+.service-grid-wrapper {
+    position: relative;
+    /* important for button absolute positioning */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.show-more-btn {
+    margin-top: 2rem;
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    padding: 0.9rem 2.4rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.show-more-btn:hover {
+    background-color: #000000;
+    color: #22C55E;
+}
+
+@media (max-width: 900px) {
+    .show-more-btn-circle {
+        right: -20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .show-more-btn-circle {
+        right: -15px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ===== FLOATING BUBBLE ===== */
+.show-how-btn-circle {
+    position: absolute;
+    right: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #22c55e;
+    color: black;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.6);
+    animation: floatMorph 4s ease-in-out infinite;
+    z-index: 15;
+}
+
+.show-how-btn-circle:hover {
+    background: black;
+    color: #22c55e;
+    transform: translateY(-50%) scale(1.1);
+}
+
+@keyframes floatMorph {
+    0% {
+        transform: translateY(-50%) translateY(0);
+        border-radius: 50%;
+    }
+
+    25% {
+        border-radius: 60% 40% 55% 45%;
+    }
+
+    50% {
+        transform: translateY(-50%) translateY(-10px);
+        border-radius: 45% 65% 40% 60%;
+    }
+
+    75% {
+        border-radius: 58% 42% 65% 35%;
+    }
+
+    100% {
+        transform: translateY(-50%) translateY(0);
+        border-radius: 50%;
+    }
+}
+
+/* ===== MODAL OVERLAY ===== */
+.how-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+/* ===== MODAL BOX ===== */
+.how-modal-box {
+    background: black;
+    color: white;
+    width: 92%;
+    max-width: 720px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 18px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    animation: popUp 0.35s ease;
+}
+
+/* Close Button */
+.close-how-modal {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    border: none;
+    background: none;
+    color: #22c55e;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+@keyframes popUp {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 480px) {
+    .show-how-btn-circle {
+        width: 40px;
+        height: 40px;
+        right: -22px;
+    }
+
+    .how-modal-box {
+        padding: 2rem 1.2rem;
     }
 }

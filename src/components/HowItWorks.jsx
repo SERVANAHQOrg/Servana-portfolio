@@ -3,7 +3,6 @@ import { FaListAlt, FaCalendarCheck, FaUserCheck } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 export default function HowItWorks() {
   const steps = [
     {
@@ -23,7 +22,6 @@ export default function HowItWorks() {
     },
   ];
 
-
   const handleComingSoon = () => {
     toast.info("Coming soon!", {
       position: "bottom-center",
@@ -34,7 +32,7 @@ export default function HowItWorks() {
   };
 
   return (
-    <section className="how-it-works">
+    <div className="how-it-works-modal-content">
       <h2 className="hiw-title">How It Works</h2>
 
       <div className="hiw-steps">
@@ -47,9 +45,11 @@ export default function HowItWorks() {
         ))}
       </div>
 
-      <button className="hiw-cta" onClick={handleComingSoon}>Start Now</button>
+      <button className="hiw-cta" onClick={handleComingSoon}>
+        Start Now
+      </button>
 
       <ToastContainer />
-    </section>
+    </div>
   );
 }

@@ -5,24 +5,19 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
-import ContactJoin from "./components/ContactJoin";
 import Footer from "./components/Footer";
 import "./index.css";
-import WhyChooseUs from "./components/WhyChooseUs";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Dyk from "./components/Dyk";
 import ReferralChallenge from "./pages/ReferralChallenge";
 import SubscriptionPage from "./pages/SubscriptionPage";
-import CommunityImpact from "./components/CommunityImpact";
-import HowItWorks from "./components/HowItWorks";
 import AboutIntro from "./components/AboutIntro";
-import HomeStory from "./components/HomeStory";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Cookies from "./pages/Cookies";
-import Blog from "./components/Blog";
 import BlogDetail from "./components/BlogDetail";
+import ServanaExperience from "./components/ServanaExperience";
+import TrustImpactUnified from "./components/TrustImpactUnified";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -44,15 +39,10 @@ function App() {
           element={
             <>
               <Hero />
-              <HomeStory />
+              <ServanaExperience />
               <Services />
-              <HowItWorks/>
-              <WhyChooseUs />
-              <CommunityImpact/>
+              <TrustImpactUnified/>
               <AboutIntro/>
-              <Dyk />
-              <Blog />
-              <ContactJoin />
             </>
           }
         />
@@ -62,7 +52,7 @@ function App() {
         <Route path="/terms" element={<Terms />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/cookies" element={<Cookies />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog" element={<ServanaExperience />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/blog/featured" element={<BlogDetail />} />
       </Routes>

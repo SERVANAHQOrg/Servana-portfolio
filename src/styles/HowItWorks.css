@@ -1,8 +1,10 @@
 .how-it-works {
     padding: 4rem 2rem;
-    background: #f0fdf4;
+    background: linear-gradient(to bottom, #000000 0%, #ffffff 100%);
     /* soft green background */
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .hiw-title {
@@ -72,3 +74,5 @@
     color: #fff !important;
     font-weight: 800;
 }
+
+

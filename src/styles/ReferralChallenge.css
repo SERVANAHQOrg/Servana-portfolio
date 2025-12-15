@@ -1,6 +1,6 @@
 .referral-page {
     font-family: "Nunito Sans", sans-serif;
-    background: #f8faf8;
+    background: #000000;
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -28,7 +28,7 @@
 
 .ref-hero-content h1 {
     font-size: 2.8rem;
-    color: #1a1a1a;
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -73,11 +73,11 @@
 
 .referral-header h2 {
     font-size: 2.3rem;
-    color: #0f172a;
+    color: #ffffff;
 }
 
 .referral-header p {
-    color: #475569;
+    color: #969799;
     font-size: 1.1rem;
 }
 
@@ -89,11 +89,11 @@
 
 .tier-header {
     font-size: 2rem;
-    color: #1a1a1a;
+    color: #ffffff;
 }
 
 .tier-subtext {
-    color: #555;
+    color: #969799;
     margin-bottom: 2rem;
 }
 

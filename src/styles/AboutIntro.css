@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 2rem;
     padding: 5rem 2rem;
-    background-color: #f9fafb;
+    background: linear-gradient(to top, #ffffff 55%, #ffffff 10%, #f3f1f19f 90%);
     flex-wrap: wrap;
     position: relative;
 }
@@ -40,7 +40,7 @@
 
 /* === Center Card === */
 .about-intro {
-    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    background: linear-gradient(135deg, #000000, #000000);
     padding: 5rem 1.5rem;
     text-align: center;
     border-radius: 20px;
@@ -93,7 +93,7 @@
 .intro-text p {
     max-width: 620px;
     margin: 0.8rem auto;
-    color: #1f2937;
+    color: #ffffff;
     line-height: 1.7;
     font-size: 1rem;
     text-align: justify;
@@ -120,7 +120,7 @@
     0%,
     100% {
         transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
+        box-shadow: 0 0 0 0 rgba(16, 197, 82, 0.76);
     }
 
     50% {
