@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle at center, #22c55e 0%, #000000 80%);
+    background: #000;
     transition: opacity 0.8s ease;
     z-index: 9999;
 }
@@ -28,7 +28,7 @@
     width: 380px;
     max-width: 100%;
     animation: popIn 1.5s ease forwards;
-    filter: drop-shadow(0 0 12px #22c55e);
+    /* filter: drop-shadow(0 0 12px #22c55e); */
 }
 
 /* Rotating Text */
@@ -40,7 +40,7 @@
     letter-spacing: 2px;
     margin-right: 30px;
     text-align: center;
-    text-shadow: 0 0 15px rgba(255,255,255,0.4);
+    /* text-shadow: 0 0 15px rgba(255,255,255,0.4); */
     opacity: 0;
     animation: fadeInOut 0.4s ease-in-out forwards;
 }

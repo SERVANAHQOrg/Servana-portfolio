@@ -4,7 +4,7 @@
     justify-content: center;
     gap: 2rem;
     padding: 5rem 2rem;
-    background: linear-gradient(to top, #ffffff 55%, #ffffff 10%, #f3f1f19f 90%);
+    background: linear-gradient(to bottom, #ffffff 10%, #8a8a8ab0 60%, #000000 97%);
     flex-wrap: wrap;
     position: relative;
 }

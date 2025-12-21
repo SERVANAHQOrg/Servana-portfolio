@@ -421,7 +421,7 @@
 .se-bubble {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 1px;
     background: #ffffff;
     padding: 14px 22px;
     border-radius: 40px;
