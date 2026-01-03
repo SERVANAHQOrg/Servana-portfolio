@@ -152,6 +152,8 @@
     transform:none;
     width: 100%;
     height: 360px;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
@@ -267,13 +269,16 @@
     /* Bottom area becomes single column */
     .trust-new-bottom {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.1rem;
         text-align: center;
+        justify-items: center;
     }
 
     .trust-new-photo {
-        width: 350px;
+        width: 100%;
+        max-width: 350px;
         height: 220px;
+        margin: 0 auto;
         transform: none;
     }
 
