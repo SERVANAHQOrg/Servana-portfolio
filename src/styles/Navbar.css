@@ -9,11 +9,38 @@
     top: 0;
     z-index: 1000;
     background: #000000;
-    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.35s ease;
     height: 95px;
+    overflow: visible;
+
+    transition: background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.35s ease;
 }
 
-/* Logo */
+/* ---------- CINEMATIC BOTTOM FADE ---------- */
+.navbar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 90px;
+
+    pointer-events: none;
+    z-index: 5;
+
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.60) 22%,
+            rgba(0, 0, 0, 0.35) 45%,
+            rgba(0, 0, 0, 0.15) 65%,
+            rgba(0, 0, 0, 0.05) 80%,
+            rgba(0, 0, 0, 0) 100%);
+
+    backdrop-filter: blur(2px);
+}
+
+/* ---------- Logo ---------- */
 .navbar-logo {
     display: flex;
     align-items: center;
@@ -32,7 +59,7 @@
     color: #22C55E;
 }
 
-/* Links */
+/* ---------- Links ---------- */
 .nav-links {
     display: flex;
     list-style: none;
@@ -47,18 +74,19 @@
     gap: 8px;
     color: #22C55E;
     cursor: pointer;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .nav-links li:hover {
-    color: #fff;
+    color: #ffffff;
+    transform: translateY(-1px);
 }
 
 .link-text {
     font-size: 20px;
 }
 
-/* Menu toggle (desktop hidden) */
+/* ---------- Menu Toggle ---------- */
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
@@ -68,10 +96,18 @@
     cursor: pointer;
 }
 
-/* ---------- SCROLL SHADOW ---------- */
+/* ---------- SCROLL STATE ---------- */
 .navbar.scrolled {
-    background-color: #000000c7;
+    background-color: rgba(0, 0, 0, 0.78);
     box-shadow: 0 2px 8px rgba(34, 197, 94, 0.6);
+}
+
+.navbar.scrolled::after {
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.70) 0%,
+            rgba(0, 0, 0, 0.45) 30%,
+            rgba(0, 0, 0, 0.20) 60%,
+            rgba(0, 0, 0, 0) 100%);
 }
 
 /* ---------- BUBBLE MODE ---------- */
@@ -91,25 +127,31 @@
     justify-content: center;
     align-items: center;
 
-    box-shadow: 0 8px 30px rgba(22, 163, 74, 0.18),
+    box-shadow:
+        0 8px 30px rgba(22, 163, 74, 0.18),
         0 4px 10px rgba(0, 0, 0, 0.3);
+
     z-index: 2000;
 }
 
-/* Hide logo & links ONLY when menu is not open */
+/* Disable fade in bubble mode */
+.navbar.bubble::after {
+    display: none;
+}
+
+/* Hide logo & links when closed */
 .navbar.bubble:not(.open) .navbar-logo,
 .navbar.bubble:not(.open) .nav-links {
     display: none !important;
 }
 
-/* Show toggle icon inside bubble */
 .navbar.bubble .menu-toggle {
     display: block;
-    color: white;
+    color: #ffffff;
     font-size: 28px;
 }
 
-/* ---------- POPUP MENU (Bubble mode) ---------- */
+/* ---------- Bubble Popup Menu ---------- */
 .navbar.bubble .nav-links.open {
     display: flex !important;
     flex-direction: column;
@@ -124,6 +166,7 @@
     padding: 18px;
     border-radius: 12px;
     z-index: 2500;
+
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
@@ -133,11 +176,11 @@
 }
 
 .navbar.bubble .nav-links.open li:hover {
-    color: white;
+    color: #ffffff;
     transform: translateX(4px);
 }
 
-/* Overlay */
+/* ---------- Bubble Overlay ---------- */
 .bubble-overlay {
     position: fixed;
     inset: 0;
@@ -146,7 +189,7 @@
     z-index: 2300;
 }
 
-/* ---------- MOBILE DROPDOWN (Not bubble mode) ---------- */
+/* ---------- MOBILE DROPDOWN ---------- */
 @media (max-width: 1024px) {
     .nav-links {
         display: none;
@@ -165,17 +208,18 @@
         font-size: 1.6rem;
     }
 
-    /* normal mobile dropdown */
     .navbar:not(.bubble) .nav-links.open {
         display: flex !important;
         position: absolute;
         top: 90px;
         right: 20px;
-        background: #000;
+
+        background: #000000;
         flex-direction: column;
         gap: 12px;
         padding: 15px;
         width: 230px;
+
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         z-index: 1500;
@@ -183,6 +227,10 @@
 }
 
 @media (max-width: 480px) {
+    .navbar::after {
+        height: 55px;
+    }
+
     .navbar.bubble {
         width: 56px;
         height: 56px;
@@ -197,10 +245,7 @@
     }
 }
 
-
-/* ------------------------------
-   SERVANA RIGHT SLIDE SIDEBAR
---------------------------------*/
+/* ---------- SERVANA RIGHT SLIDE SIDEBAR ---------- */
 .servana-sidebar {
     position: fixed;
     top: 0;
@@ -208,7 +253,7 @@
     width: 45%;
     height: 100vh;
     background: #000000;
-    color: white;
+    color: #ffffff;
     z-index: 5000;
     padding: 120px 50px;
 
@@ -220,12 +265,10 @@
     box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/* When open */
 .servana-sidebar.show {
     right: 0;
 }
 
-/* Sidebar links */
 .servana-sidebar ul {
     list-style: none;
     display: flex;
@@ -246,7 +289,6 @@
     color: #ffffff;
 }
 
-/* Close button */
 .sidebar-close {
     position: absolute;
     top: 35px;
@@ -256,12 +298,11 @@
     border-radius: 50%;
     border: none;
     background: #22C55E;
-    color: black;
+    color: #000000;
     font-size: 26px;
     cursor: pointer;
 }
 
-/* Mobile width */
 @media (max-width: 900px) {
     .servana-sidebar {
         width: 65%;
@@ -269,15 +310,12 @@
     }
 }
 
-
-/* ---- CURVED BUBBLE POP-OUT EFFECT ---- */
+/* ---------- BUBBLE POP ANIMATION ---------- */
 .navbar.bubble .nav-links.open {
     animation: bubblePop 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     transform-origin: top right;
-    clip-path: circle(0% at 90% -20%);
 }
 
-/* animate the curve reveal */
 @keyframes bubblePop {
     0% {
         opacity: 0;
@@ -293,36 +331,5 @@
         opacity: 1;
         transform: translateY(0) scale(1);
         clip-path: circle(150% at 90% 0%);
-    }
-}
-
-
-/* ------------------------------
-   CURVED POP OUT ANIMATION (GUARANTEED WORKING)
-------------------------------- */
-
-/* animate only when popup class is applied */
-.popup {
-    animation: curvedReveal 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-    transform-origin: top right;
-    clip-path: circle(0% at 100% 0%);
-}
-
-/* animation frames */
-@keyframes curvedReveal {
-    0% {
-        opacity: 0;
-        transform: translateY(-8px) scale(0.7);
-        clip-path: circle(0% at 100% 0%);
-    }
-
-    60% {
-        clip-path: circle(60% at 100% 0%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        clip-path: circle(150% at 100% 0%);
     }
 }

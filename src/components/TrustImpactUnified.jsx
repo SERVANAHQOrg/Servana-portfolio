@@ -56,7 +56,7 @@ export default function TrustImpactUnified() {
     const t = setInterval(() => {
       setFadeKey((k) => k + 1); // trigger fade
       setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
+    }, 3500);
     return () => clearInterval(t);
   }, []);
 
