@@ -21,6 +21,7 @@ import TrustImpactUnified from "./components/TrustImpactUnified";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [contactOpen, setContactOpen] = useState(false); 
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -32,7 +33,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar onContactClick={() => setContactOpen(true)} />
       <Routes>
         <Route
           path="/"
@@ -56,7 +57,7 @@ function App() {
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/blog/featured" element={<BlogDetail />} />
       </Routes>
-      <Footer />
+      <Footer  open={contactOpen} setOpen={setContactOpen}  />
     </>
   );
 }

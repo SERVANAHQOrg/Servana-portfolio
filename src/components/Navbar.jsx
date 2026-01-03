@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../assets/servanalogo.png";
 
-function Navbar() {
+function Navbar({onContactClick}) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -84,7 +84,9 @@ function Navbar() {
     <span className="link-text">Services</span>
   </li>
 
-  <li onClick={() => scrollToId("contact")}>
+  <li onClick={() => {onContactClick();
+    setOpen(false);
+  }}>
     <i className="fa-solid fa-phone"></i>
     <span className="link-text">Contact</span>
   </li>
@@ -104,10 +106,10 @@ function Navbar() {
       {/* RIGHT SLIDE-OUT SIDEBAR — uses same "open" state */}
 <div className={`servana-sidebar ${open ? "show" : ""}`}>
   <ul>
-    <li onClick={() => scrollToId("hero")}>Home</li>
-    <li onClick={() => { navigate("/about"); setOpen(false); }}>About</li>
-    <li onClick={() => scrollToId("services")}>Services</li>
-    <li onClick={() => scrollToId("contact")}>Contact</li>
+    <li onClick={() => scrollToId("hero")}>• Home</li>
+    <li onClick={() => { navigate("/about"); setOpen(false); }}>• About</li>
+    <li onClick={() => scrollToId("services")}>• Services</li>
+    <li onClick={() => {onContactClick(); setOpen(false);}}>• Contact</li>
   </ul>
 
   <button className="sidebar-close" onClick={() => setOpen(false)}>×</button>

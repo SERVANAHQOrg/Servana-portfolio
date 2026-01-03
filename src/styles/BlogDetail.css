@@ -28,7 +28,7 @@
 /* === Back Button === */
 .back-btn {
     position: fixed;
-    top: 20px;
+    top: 90px;
     left: 20px;
     background: white;
     border: 2px solid #22c55e;
@@ -91,7 +91,7 @@
 
 
 .detail-content h3 {
-    color: #848584;
+    color: #000000;
     margin-top: 25px;
     font-size: 1.3rem;
 }

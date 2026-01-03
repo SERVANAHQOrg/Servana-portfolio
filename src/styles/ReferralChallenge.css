@@ -130,6 +130,10 @@
     margin-bottom: 0.3rem;
 }
 
+.tier-card p{
+    font-style: italic;
+}
+
 .tier-reward {
     color: #16a34a;
     font-weight: 600;

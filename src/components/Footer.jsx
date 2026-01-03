@@ -7,11 +7,11 @@ import logo from "../assets/servanalogo.png";
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { useState } from "react";
 
-export default function Footer() {
+export default function Footer({open, setOpen}) {
   const year = new Date().getFullYear();
   const location = useLocation();
   const navigate = useNavigate();
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
   const handleScroll = (id) => {
     if (location.pathname !== "/") {
