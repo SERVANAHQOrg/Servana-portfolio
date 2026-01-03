@@ -9,7 +9,7 @@
     top: 0;
     z-index: 1000;
     background: #000000;
-    height: 95px;
+    height: 90px;
     overflow: visible;
 
     transition: background 0.3s ease,
@@ -37,7 +37,7 @@
             rgba(0, 0, 0, 0.05) 80%,
             rgba(0, 0, 0, 0) 100%);
 
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(0.7px);
 }
 
 /* ---------- Logo ---------- */
