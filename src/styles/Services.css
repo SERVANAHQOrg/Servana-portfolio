@@ -135,6 +135,7 @@
     /* important for button absolute positioning */
     max-width: 1200px;
     margin: auto;
+    overflow-x: clip;
 }
 
 .show-more-btn {
@@ -182,9 +183,9 @@
 /* ===== FLOATING BUBBLE ===== */
 .show-how-btn-circle {
     position: absolute;
-    right: -150px;
+    right:0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(150%,-50%);
     width: 85px;
     height: 85px;
     border-radius: 50%;
@@ -298,7 +299,8 @@
     .show-how-btn-circle {
         width: 40px;
         height: 40px;
-        right: -22px;
+        right:0;
+        transform: translate(60%, -50%);
     }
 
     .how-modal-box {
