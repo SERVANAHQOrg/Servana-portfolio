@@ -138,15 +138,21 @@ input:checked+.slider:before {
 
 .plan-card {
     background: #fff;
-    border: 1px solid #e5e7eb;
     border-radius: 1rem;
-    padding: 2.5rem 2rem;
-    max-width: 330px;
+    padding: 2.2rem 2rem;
+    max-width: 340px;
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
     position: relative;
+    min-height: 420px;
+    /* 🔥 keeps cards equal */
 }
 
 .plan-card:hover {
@@ -155,35 +161,78 @@ input:checked+.slider:before {
 }
 
 
-.plan-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-    font-weight: 600;
+.plan-card.highlight {
+    transform: scale(1.04);
+    border-width: 2px;
 }
 
-.plan-card h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #22c55e;
+.plan-card.highlight::before {
+    content: "POPULAR";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #22c55e;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
     font-weight: 700;
 }
 
 
+.plan-card h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: #111;
+}
+
+.plan-card h2 {
+    font-size: 2.1rem;
+    margin-bottom: 0.4rem;
+    color: #22c55e;
+    font-weight: 700;
+}
+
 .plan-card h2 span {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    color: #555;
     font-weight: 400;
 }
+
+.plan-card::after {
+    content: "";
+    width: 60%;
+    height: 1px;
+    background: #e5e7eb;
+    margin: 1.2rem auto;
+}
+
 
 .plan-card ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 2rem;
-    color: #292929;
+    margin: 1.5rem 0 0;
+    text-align: left;
+    flex-grow: 1;
 }
 
 .plan-card ul li {
-    margin: 0.6rem 0;
     font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.plan-card ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #22c55e;
+    font-weight: bold;
 }
 
 /* === Worker Section === */
@@ -212,7 +261,20 @@ input:checked+.slider:before {
 
     .plan-card {
         padding: 2rem 1.5rem;
+        min-height: auto;
     }
+
+                .plan-card ul {
+                    text-align: center;
+                }
+        
+                .plan-card ul li {
+                    padding-left: 0;
+                }
+        
+                .plan-card ul li::before {
+                    display: none;
+                }
 
     .plans-container {
         grid-template-columns: 1fr;

@@ -195,7 +195,7 @@
 
 .se-journal-title {
     font-size: 1.2rem;
-    color: #22c55e;
+    color: #000000;
     margin: 0;
     font-weight: 700;
 }
@@ -234,16 +234,6 @@
     margin: 0 0 0.6rem;
     color: #475569;
     font-size: 0.92rem;
-}
-
-.se-ghost {
-    background: transparent;
-    border: 1px solid rgba(2, 6, 23, 0.06);
-    padding: 0.45rem 0.9rem;
-    border-radius: 999px;
-    cursor: pointer;
-    font-weight: 600;
-    color: #0f172a;
 }
 
 /* article cards (compact) */

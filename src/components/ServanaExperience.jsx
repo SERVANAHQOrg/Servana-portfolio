@@ -175,9 +175,6 @@ export default function ServanaExperience() {
                     Practical advice, inspiring stories, and Servana’s modern approach to making every home a place of balance and care.
                   </p>
                   <div className="se-featured-actions">
-                    <button className="se-ghost" onClick={() => navigate("/blog/featured")}>
-                      Get Inspired
-                    </button>
                   </div>
                 </div>
               </div>

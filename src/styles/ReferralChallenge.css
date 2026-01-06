@@ -97,6 +97,81 @@
     margin-bottom: 2rem;
 }
 
+/* === CARD INTERNAL STRUCTURE === */
+.tier-hook {
+    font-size: 0.95rem;
+    color: #16a34a;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.tier-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.tier-benefits li {
+    position: relative;
+    padding-left: 1.6rem;
+    /* 🔥 KEY FIX */
+    margin-bottom: 0.85rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #0f172a;
+}
+
+.tier-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0.15rem;
+    /* 🔥 vertical alignment */
+    color: #16a34a;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.tier-requirements {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 0.8rem;
+    font-size: 0.85rem;
+    color: #475569;
+}
+
+/* === BADGES === */
+.tier-badge {
+    align-self: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 0.8rem;
+}
+
+.tier-badge.starter {
+    background: #e5e7eb;
+    color: #334155;
+}
+
+.tier-badge.popular {
+    background: #000;
+    color: #fff;
+}
+
+.tier-badge.elite {
+    background: #22c55e;
+    color: #000;
+}
+
+/* === FEATURED TIER === */
+.featured {
+    transform: scale(1.06);
+    box-shadow: 0 25px 60px rgba(34, 197, 94, 0.35);
+}
+
 /* === Equal height layout === */
 .tier-grid {
     display: flex;
@@ -132,6 +207,23 @@
 
 .tier-card p{
     font-style: italic;
+}
+
+.tier-quote {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #475569;
+    background: rgba(22, 163, 74, 0.06);
+    padding: 0.8rem 1rem;
+    border-left: 3px solid #16a34a;
+    border-radius: 0.5rem;
+    margin: 0.8rem 0 1rem;
+}
+
+.tier-quote.highlight {
+    background: rgba(34, 197, 94, 0.12);
+    border-left-color: #22c55e;
+    font-weight: 500;
 }
 
 .tier-reward {

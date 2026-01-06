@@ -1,8 +1,18 @@
+/* ================================
+   TRUST / REFERRAL UNIFIED SECTION
+   ================================ */
+
 .trust-new {
-    padding: 3rem 1.5rem 5rem;
-    background: linear-gradient(180deg, #000000 8%, #202020 18%, #ffffff 100%);
+    position: relative;
+    isolation: isolate;
+    padding: 3rem 1.5rem 6rem;
+    background: linear-gradient(180deg,
+            #000000 8%,
+            #202020 18%,
+            #ffffff 100%);
     color: #14221a;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    overflow: clip;
 }
 
 /* ---------- Title ---------- */
@@ -11,31 +21,26 @@
     font-size: clamp(1.8rem, 3.2vw, 2.4rem);
     color: #22c55e;
     font-weight: 700;
-    margin-bottom: 2.2rem;
+    margin-bottom: 2.5rem;
 }
 
-/* ---------- TOP GRID (cards / illustration / referral text) ---------- */
+/* ---------- TOP GRID ---------- */
 .trust-new-grid {
     max-width: 1300px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns:
-        minmax(0, 340px) minmax(0, 1fr) minmax(0, 320px);
-    gap: 2.2rem;
-    align-items: start;
-    overflow: hidden;
+    grid-template-columns: 340px 1fr 320px;
+    gap: 2.5rem;
+    align-items: center;
 }
 
-/* ----- LEFT column: stacked cards ----- */
+/* ---------- LEFT: TRUST CARDS ---------- */
 .trust-new-left {
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
-    /* subtle left shift without breaking layout */
-    transform:none;
 }
 
-/* ----- Card style ----- */
 .trust-new-card {
     background: #eef9ef;
     border-radius: 14px;
@@ -44,15 +49,9 @@
     gap: 0.9rem;
     align-items: flex-start;
     border: 1px solid rgba(34, 128, 62, 0.06);
-    min-height: 76px;
     box-shadow: 0 6px 14px rgba(14, 34, 20, 0.03);
-    width: 100%;
-    /* fill left column */
-    max-width: 438px;
-    /* prevents excessive growth */
 }
 
-/* icon column inside card */
 .trust-new-icon {
     font-size: 1.5rem;
     color: #1f7d3a;
@@ -62,7 +61,6 @@
     justify-content: center;
 }
 
-/* card body */
 .trust-new-card-body h3 {
     margin: 0 0 4px 0;
     font-size: 1rem;
@@ -73,35 +71,29 @@
     margin: 0;
     font-size: 0.86rem;
     color: #294434;
+    line-height: 1.3;
     opacity: 0.85;
-    line-height: 1.25;
 }
 
-/* ---------- CENTER illustration ---------- */
+/* ---------- CENTER ILLUSTRATION ---------- */
 .trust-new-referral-img {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* make the illustration larger to match your screenshot and keep responsive */
 .trust-new-referral-img img {
     width: 420px;
     max-width: 100%;
     display: block;
-    margin-top: -40px;
-    /* small lift for visual balance */
     border-radius: 10px;
 }
 
-/* ---------- RIGHT referral copy + button ---------- */
+/* ---------- RIGHT REFERRAL CONTENT ---------- */
 .trust-new-referral-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 0.8rem;
-    max-width: 580px;
-    width: 100%;
 }
 
 .trust-new-referral-content h3 {
@@ -111,7 +103,6 @@
 }
 
 .trust-new-referral-copy {
-    margin: 0.35rem 0 0;
     font-size: 0.98rem;
     color: #22c55e;
     line-height: 1.45;
@@ -122,47 +113,42 @@
     width: max-content;
     padding: 0.6rem 1.2rem;
     background: #22c55e;
-    color: #fff;
+    color: #000000;
     border: none;
     border-radius: 999px;
     cursor: pointer;
     font-weight: 600;
     box-shadow: 0 6px 14px rgba(31, 125, 58, 0.14);
+    transition: all 220ms ease;
 }
 
 .trust-new-btn:hover {
-    background-color: #000;
+    background: #000000;
     color: #22c55e;
     transform: translateY(-2px);
 }
 
-/* ---------- BOTTOM SECTION (image slider + testimonial) ---------- */
-/* Use a grid to keep the image on the left and testimonial on the right */
+/* ---------- BOTTOM SECTION ---------- */
 .trust-new-bottom {
     max-width: 1300px;
-    margin: 3rem auto 0;
+    margin: 4.5rem auto 0;
     display: grid;
-    grid-template-columns: 1fr 350px;
-    /* left: image slider, right: testimonial */
-    align-items: start;
-    gap: 2rem;
+    grid-template-columns: 1fr 360px;
+    gap: 2.5rem;
+    align-items: center;
 }
 
-/* image container */
+/* ---------- IMAGE SLIDER ---------- */
 .trust-new-photo {
-    transform:none;
     width: 100%;
     height: 360px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 20px 48px rgba(14, 34, 20, 0.08);
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.02));
+    background: #f3f3f3;
 }
 
-/* slider images (stacked absolutely) */
 .trust-photo-slide {
     position: absolute;
     inset: 0;
@@ -170,134 +156,75 @@
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 900ms ease, transform 700ms ease;
+    transition: opacity 900ms ease;
 }
 
 .trust-photo-slide.active {
     opacity: 1;
-    transform: translateY(0);
 }
 
-/* ---------- Testimonial box on the right ---------- */
+/* ---------- TESTIMONIAL ---------- */
 .trust-new-quote-wrap {
-    
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-    /* horizontal offset to move testimonial further right on desktop */
-    margin-left:0;
-    position: relative;
+    gap: 0.6rem;
+    padding-top: 2rem;
 }
 
 .trust-new-quote {
     font-size: 1.05rem;
-    margin: 0;
     color: #2b1d13;
     line-height: 1.45;
-    max-width: 370px;
-    width: 100%;
-    margin-top: 120px;
+    max-width: 360px;
 }
 
 .trust-new-author {
-    margin: 0;
     font-size: 0.95rem;
     color: #22c55e;
     opacity: 0.9;
 }
 
-.trust-fade {
-    opacity: 0;
-    transform: translateY(6px);
-    transition: opacity 600ms ease, transform 600ms ease;
-}
-
-.trust-fade.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* testimonial controls */
-.trust-controls {
-    display: flex;
-    gap: 0.6rem;
-    margin-top: 0.6rem;
-}
-
-
-/* ---------- A11Y helpers (optional) ---------- */
-.trust-new-quote-wrap[aria-live] {
-    outline: none;
-}
-
-/* ---------- Responsive behaviour ---------- */
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 1000px) {
 
-    /* Collapse top grid to single column on tablet/smaller */
     .trust-new-grid {
         grid-template-columns: 1fr;
-        gap: 1.2rem;
         text-align: center;
+        gap: 1.6rem;
     }
 
-    /* Reset left shift for stacked cards */
     .trust-new-left {
-        transform: translateX(0);
-        order: 1;
         align-items: center;
-        /* center cards on mobile */
     }
 
     .trust-new-card {
-        max-width: 720px;
         width: 92%;
-    }
-
-    .trust-new-referral-img {
-        order: 2;
-        margin-top: -10px;
+        max-width: 720px;
     }
 
     .trust-new-referral-content {
-        order: 3;
         align-items: center;
-        padding-left: 0;
-        width: auto;
     }
 
-    /* Bottom area becomes single column */
     .trust-new-bottom {
         grid-template-columns: 1fr;
-        gap: 1.1rem;
+        gap: 1.4rem;
         text-align: center;
         justify-items: center;
     }
 
     .trust-new-photo {
-        width: 100%;
-        max-width: 350px;
+        max-width: 360px;
         height: 220px;
-        margin: 0 auto;
-        transform: none;
     }
 
     .trust-new-quote-wrap {
-        margin-left: 0;
-        width: 100%;
         align-items: center;
-        text-align: center;
-
+        padding-top: 0;
     }
 }
 
 @media (max-width: 520px) {
-
-    /* Small phones */
-    .trust-new-photo {
-        height: 170px;
-    }
 
     .trust-new-title {
         font-size: 1.6rem;
@@ -305,28 +232,17 @@
 
     .trust-new-referral-img img {
         width: 300px;
-        margin-top: -20px;
     }
 
-    .trust-new-card {
-        padding: 0.9rem;
+    .trust-new-referral-copy{
+        color: #000000;
+        }
+
+    .trust-new-photo {
+        height: 170px;
     }
 
     .trust-new-quote {
         font-size: 1rem;
-    }
-}
-
-@media (min-width: 1100px) {
-    .trust-new-left {
-        transform: translateX(-180px);
-    }
-
-    .trust-new-photo {
-        transform: translateX(-180px);
-    }
-
-    .trust-new-quote-wrap {
-        margin-left: var(--quote-offset, 0);
     }
 }
