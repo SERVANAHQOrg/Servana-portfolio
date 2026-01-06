@@ -71,6 +71,7 @@
     position: relative;
     margin: 2rem 0;
     background-color: #0000005e;
+    overflow-x: hidden;
 }
 
 /* Semi-transparent layered boxes */
@@ -144,5 +145,13 @@
 
     .founder-text p {
         font-size: 0.95rem;
+    }
+
+    .founder-layer.layer1,
+    .founder-layer.layer2 {
+        width: 200px;
+        height: 120px;
+        transform: translate(0, 0);
+        opacity: 0.4;
     }
 }
