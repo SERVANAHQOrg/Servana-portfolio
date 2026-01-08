@@ -25,11 +25,11 @@ const testimonials = [
   },
   {
     text: "Professional and friendly staff. Highly recommend.",
-    name: "Peter – South B",
+    name: "Peter – Nyayo Estate",
   },
   {
     text: "Booking services is super easy and always on time.",
-    name: "Aisha – Kilimani",
+    name: "Aisha – Nyayo Estate",
   },
 ];
 
