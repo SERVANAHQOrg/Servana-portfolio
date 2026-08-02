@@ -1,0 +1,368 @@
+.app-info {
+    max-width: 520px;
+}
+
+.app-badge {
+    display: inline-block;
+
+    padding: 10px 22px;
+
+    border-radius: 999px;
+
+    color: white;
+
+    font-weight: 700;
+
+    font-size: .9rem;
+
+    margin-bottom: 24px;
+}
+
+.app-badge.green {
+    background: #22C55E;
+}
+
+.app-badge.black {
+    background: #000000;
+}
+
+.app-info h2 {
+    font-size: 3.2rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 24px;
+
+    color: #0F172A;
+}
+
+.app-info p {
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    color: #ffffff;
+
+    margin-bottom: 40px;
+}
+
+.app-features {
+    list-style: none;
+
+    padding: 0;
+
+    display: grid;
+
+    gap: 18px;
+
+    margin-bottom: 45px;
+}
+
+.app-features li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 1.05rem;
+
+    color: #334155;
+}
+
+.app-features svg {
+    color: #22C55E;
+
+    flex-shrink: 0;
+}
+
+.app-buttons {
+
+    display: flex;
+
+    gap: 16px;
+
+    flex-wrap: wrap;
+
+    margin-top: 40px;
+
+}
+
+.download-btn {
+
+    flex: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 16px 24px;
+
+    border: none;
+
+    border-radius: 18px;
+
+    cursor: pointer;
+
+    background: white;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, .08);
+
+    transition:
+        .35s ease;
+
+}
+
+.download-btn:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 22px 45px rgba(15, 23, 42, .15);
+
+}
+
+.icon-box {
+
+    width: 56px;
+
+    height: 56px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 1.8rem;
+
+}
+
+.download-btn.android .icon-box {
+
+    background: #22C55E;
+
+    color: white;
+
+}
+
+.download-btn.android:hover {
+
+    background: #22C55E;
+
+    color: white;
+
+}
+
+.download-btn.android:hover .btn-text span,
+.download-btn.android:hover .btn-text small {
+
+    color: white;
+
+}
+
+
+.download-btn.ios .icon-box {
+
+    background: #111827;
+
+    color: white;
+
+}
+
+.download-btn.ios:hover {
+
+    background: #111827;
+
+    color: white;
+
+}
+
+.download-btn.ios:hover .btn-text span,
+.download-btn.ios:hover .btn-text small {
+
+    color: white;
+
+}
+
+.btn-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.btn-text small {
+
+    color: #64748B;
+
+    font-size: .8rem;
+
+}
+
+.btn-text span {
+
+    font-weight: 700;
+
+    color: #0F172A;
+
+    font-size: 1rem;
+
+}
+
+@media (max-width: 1024px) {
+
+    .app-info {
+        max-width: 100%;
+    }
+
+    .app-info h2 {
+        font-size: 2.6rem;
+    }
+
+    .app-info p {
+        font-size: 1rem;
+    }
+
+    .download-btn {
+        padding: 14px 18px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .app-info {
+
+        text-align: center;
+
+        max-width: 100%;
+
+    }
+
+    .app-info h2 {
+
+        font-size: 2.2rem;
+
+    }
+
+    .app-info p {
+
+        font-size: 1rem;
+
+        margin-bottom: 30px;
+
+    }
+
+    .app-features {
+
+        gap: 14px;
+
+        margin-bottom: 35px;
+
+    }
+
+    .app-features li {
+
+        justify-content: center;
+
+        text-align: left;
+
+    }
+
+    .app-buttons {
+
+        justify-content: center;
+
+        gap: 14px;
+
+    }
+
+    .download-btn {
+
+        flex: 1;
+
+        min-width: 220px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .app-info h2 {
+
+        font-size: 1.8rem;
+
+    }
+
+    .app-info p {
+
+        font-size: .95rem;
+
+    }
+
+    .app-badge {
+
+        font-size: .75rem;
+
+        padding: 8px 18px;
+
+    }
+
+    .app-features li {
+
+        font-size: .95rem;
+
+        gap: 10px;
+
+    }
+
+    .app-buttons {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .download-btn {
+
+        width: 100%;
+
+        min-width: 100%;
+
+        padding: 15px 18px;
+
+    }
+
+    .icon-box {
+
+        width: 50px;
+
+        height: 50px;
+
+        font-size: 1.5rem;
+
+    }
+
+    .btn-text span {
+
+        font-size: .95rem;
+
+    }
+
+    .btn-text small {
+
+        font-size: .75rem;
+
+    }
+
+}

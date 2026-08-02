@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 import "../styles/ReferralChallenge.css";
 import PplImg from "../assets/people.svg";
 import System from "../assets/system.svg";
@@ -15,6 +16,15 @@ export default function ReferralChallenge() {
     navigate("/subscriptions");
   };
 
+  const handleComingSoon = () => {
+      toast.info("Coming soon!", {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        theme: "colored",
+      });
+    };
+
   return (
     <section className="referral-page">
       {/* === HERO SECTION === */}
@@ -25,7 +35,7 @@ export default function ReferralChallenge() {
             Join, refer friends, and unlock rewards — while empowering your
             community through trust and opportunity.
           </p>
-          <button className="btn-primary" onClick={goToSubscriptions}>
+          <button className="btn-primary" onClick={handleComingSoon}>
             Choose Your Plan
           </button>
         </div>
@@ -219,10 +229,12 @@ export default function ReferralChallenge() {
           Servana isn’t just an app — it’s a movement of families, workers, and
           neighbors caring for what matters most.
         </h2>
-        <button className="btn-secondary" onClick={goToSubscriptions}>
+        <button className="btn-secondary" onClick={handleComingSoon}>
           Start Your Membership
         </button>
       </div>
+
+      <ToastContainer />
     </section>
   );
 }

@@ -1,0 +1,486 @@
+/* * {
+    outline: 1px solid red;
+} */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+.downloads {
+    padding: 120px 8%;
+    background: linear-gradient(180deg, #000000 8%, #b1aeae 18%, #ffffff 100%);
+}
+
+.downloads-container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.downloads-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-tag {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #22C55E;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.downloads-header h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.downloads-header h2 span {
+    color: #22C55E;
+}
+
+.downloads-header p {
+    max-width: 700px;
+    margin: auto;
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+
+.install-section {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.downloads-footer {
+    text-align: center;
+    color: #64748b;
+}
+
+.apps-showcase {
+
+    margin-top: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.app-section {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 100px;
+
+    position: relative;
+
+    margin: 80px 0;
+
+}
+
+.app-left,
+.app-right {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.app-left {
+
+    justify-content: flex-start;
+
+}
+
+.app-right {
+
+    justify-content: flex-end;
+
+}
+
+.app-section:nth-child(odd) .app-left {
+
+    justify-content: center;
+
+}
+
+.app-section:nth-child(odd) .app-right {
+
+    justify-content: flex-start;
+
+}
+
+.app-section:nth-child(even) .app-left {
+
+    justify-content: flex-start;
+
+}
+
+.app-section:nth-child(even) .app-right {
+
+    justify-content: center;
+
+}
+
+.app-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(rgba(34, 197, 94, .05),
+            transparent 70%);
+
+    left: -250px;
+
+    z-index: -1;
+}
+
+.app-section:first-child .app-left {
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+/* .app-section:first-child .phone-showcase {
+    margin-left: -120px;
+} */
+
+.app-section:last-child .app-right {
+    justify-content: flex-end;
+}
+
+/* .app-section:last-child .phone-showcase {
+    margin-right: -140px;
+} */
+
+
+
+
+.app-info {
+
+    flex: 1;
+
+    max-width: 520px;
+
+}
+
+.app-info h2 {
+
+    font-size: 3rem;
+
+    line-height: 1.15;
+
+    margin: 24px 0;
+
+}
+
+.app-info p {
+
+    font-size: 1.15rem;
+
+    color: #64748b;
+
+    line-height: 1.8;
+
+}
+
+.android-btn,
+.ios-btn {
+
+    transition:
+        transform .3s,
+        box-shadow .3s;
+
+}
+
+.android-btn:hover,
+.ios-btn:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, .12);
+
+}
+
+/* ===================================
+   INSTALLATION SECTION
+=================================== */
+
+.install-section {
+    margin-top: 120px;
+}
+
+.install-section h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.install-section>p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 60px;
+}
+
+.install-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.install-card {
+    background: rgba(255, 255, 255, .75);
+    backdrop-filter: blur(18px);
+    border-radius: 30px;
+    padding: 40px;
+    border: 1px solid rgba(255, 255, 255, .6);
+    box-shadow: 0 25px 60px rgba(15, 23, 42, .06);
+}
+
+.install-icon {
+    font-size: 2.8rem;
+    color: #22C55E;
+    margin-bottom: 20px;
+}
+
+.install-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 30px;
+    color: #111827;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.step span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #22C55E;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step svg {
+    width: 40px;
+    height: 40px;
+    color: #22C55E;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.step p {
+    color: #475569;
+    line-height: 1.7;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .downloads {
+        padding: 100px 5%;
+    }
+
+    .downloads-header h2,
+    .install-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .app-section {
+        gap: 60px;
+    }
+
+    .app-info h2 {
+        font-size: 2.5rem;
+    }
+
+    .app-section:first-child .phone-showcase,
+    .app-section:last-child .phone-showcase {
+        margin: 0;
+    }
+
+    .install-grid {
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .downloads {
+        padding: 80px 20px;
+    }
+
+    .downloads-header {
+        margin-bottom: 60px;
+    }
+
+    .downloads-header h2,
+    .install-section h2 {
+        font-size: 2rem;
+    }
+
+    .downloads-header p,
+    .install-section p {
+        font-size: .95rem;
+    }
+
+    .apps-showcase {
+        gap: 100px;
+    }
+
+    .app-section {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        text-align: center;
+
+        margin: 0;
+
+    }
+
+    .app-left,
+    .app-right {
+
+        justify-content: center !important;
+
+    }
+
+    /* Worker phones move above text */
+
+    .app-section:nth-child(even) .app-left {
+        order: 2;
+    }
+
+    .app-section:nth-child(even) .app-right {
+        order: 1;
+    }
+
+    .app-section:first-child .phone-showcase,
+    .app-section:last-child .phone-showcase {
+
+        margin: 0;
+
+    }
+
+    .app-info {
+
+        max-width: 100%;
+
+    }
+
+    .install-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .install-card {
+
+        padding: 30px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .downloads {
+        padding: 70px 16px;
+    }
+
+    .downloads-header h2,
+    .install-section h2 {
+
+        font-size: 1.7rem;
+
+    }
+
+    .section-tag {
+
+        font-size: .8rem;
+
+        padding: 8px 18px;
+
+    }
+
+    .app-info h2 {
+
+        font-size: 2rem;
+
+    }
+
+    .install-card {
+
+        padding: 24px;
+
+        border-radius: 22px;
+
+    }
+
+    .install-header {
+
+        gap: 15px;
+
+    }
+
+    .install-icon {
+
+        width: 58px;
+
+        height: 58px;
+
+        font-size: 1.6rem;
+
+    }
+
+    .coming-icon {
+
+        width: 72px;
+
+        height: 72px;
+
+        font-size: 2rem;
+
+    }
+
+    .coming-soon h4 {
+
+        font-size: 1.6rem;
+
+    }
+
+}

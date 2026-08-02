@@ -18,6 +18,7 @@ import Cookies from "./pages/Cookies";
 import BlogDetail from "./components/BlogDetail";
 import ServanaExperience from "./components/ServanaExperience";
 import TrustImpactUnified from "./components/TrustImpactUnified";
+import DownloadApps from "./components/DownloadApps";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -44,6 +45,7 @@ function App() {
               <Services />
               <TrustImpactUnified/>
               <AboutIntro/>
+              <DownloadApps />
             </>
           }
         />

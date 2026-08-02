@@ -65,7 +65,7 @@ function Navbar({onContactClick}) {
   role="menu"
 >
   <li onClick={() => scrollToId("hero")}>
-    <i className="fa-regular fa-house"></i>
+    {/* <i className="fa-regular fa-house"></i> */}
     <span className="link-text">Home</span>
   </li>
 
@@ -75,19 +75,19 @@ function Navbar({onContactClick}) {
       setOpen(false);
     }}
   >
-    <i className="fa-regular fa-lightbulb"></i>
+    {/* <i className="fa-regular fa-lightbulb"></i> */}
     <span className="link-text">About</span>
   </li>
 
   <li onClick={() => scrollToId("services")}>
-    <i className="fa-solid fa-hand-holding-heart"></i>
+    {/* <i className="fa-solid fa-hand-holding-heart"></i> */}
     <span className="link-text">Services</span>
   </li>
 
   <li onClick={() => {onContactClick();
     setOpen(false);
   }}>
-    <i className="fa-solid fa-phone"></i>
+    {/* <i className="fa-solid fa-phone"></i> */}
     <span className="link-text">Contact</span>
   </li>
       </ul>

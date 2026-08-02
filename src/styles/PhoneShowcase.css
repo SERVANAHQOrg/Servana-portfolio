@@ -1,0 +1,493 @@
+.phone-showcase {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.phones {
+
+    position: relative;
+
+    width: 320px;
+
+    height: 520px;
+
+    margin: 0 auto;
+
+}
+
+.showcase-glow {
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: .22;
+
+    z-index: 0;
+
+animation: glowPulse 6s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: .22;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: .35;
+    }
+
+}
+
+.phone-showcase.green .showcase-glow {
+
+    background: #22c55e;
+
+}
+
+.phone-showcase.black .showcase-glow {
+
+    background: #22c55e;
+
+}
+
+.phone-back,
+.phone-front {
+
+    position: absolute;
+
+    width: 210px;
+
+    border-radius: 40px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, .18);
+
+    transition: .4s;
+
+}
+
+.phone-back {
+    
+            transform:
+                translate(-70px, -20px) rotate(-11deg);
+    
+            animation:
+                floatBack 6s ease-in-out infinite;
+
+    z-index: 1;
+
+}
+
+.phone-front {
+
+        transform:
+                translate(70px, 20px) rotate(8deg);
+        
+            animation:
+                floatFront 6s ease-in-out infinite;
+
+    z-index: 2;
+
+}
+
+@keyframes floatFront {
+
+    0%,
+    100% {
+
+        transform:
+            translate(70px, 20px) rotate(8deg);
+
+    }
+
+    50% {
+
+        transform:
+            translate(70px, 8px) rotate(6deg);
+
+    }
+
+}
+
+@keyframes floatBack {
+
+    0%,
+    100% {
+
+        transform:
+            translate(-70px, -20px) rotate(-11deg);
+
+    }
+
+    50% {
+
+        transform:
+            translate(-70px, -35px) rotate(-13deg);
+
+    }
+
+}
+
+.phone-showcase:hover .phone-front {
+
+    transform:
+        translate(90px, 10px) rotate(4deg) scale(1.03);
+
+}
+
+.phone-showcase:hover .phone-back {
+
+    transform:
+        translate(-90px, -30px) rotate(-15deg) scale(.98);
+
+}
+
+.phone-back img,
+.phone-front img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+.iphone {
+
+    position: relative;
+
+    background: #111827;
+
+    padding: 8px;
+
+    border-radius: 42px;
+
+    overflow: hidden;
+
+    box-shadow:
+
+        0 35px 80px rgba(0, 0, 0, .22);
+
+}
+
+.iphone img {
+
+    display: block;
+
+    width: 100%;
+
+    border-radius: 34px;
+
+animation:
+
+        screenFade .45s ease;
+
+}
+
+@keyframes screenFade {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+
+            scale(.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+
+            scale(1);
+
+    }
+
+}
+
+.dynamic-island {
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 92px;
+
+    height: 26px;
+
+    background: black;
+
+    border-radius: 999px;
+
+    z-index: 5;
+
+}
+
+.iphone::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 42px;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    pointer-events: none;
+
+}
+
+.iphone::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(135deg,
+            rgba(255, 255, 255, .18),
+            transparent 35%);
+
+    pointer-events: none;
+
+}
+
+.shine {
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 40%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .25),
+            transparent);
+
+    transform: skewX(-20deg);
+
+    animation:
+
+        shineMove 5s linear infinite;
+
+}
+
+@keyframes shineMove {
+
+    from {
+
+        left: -120%;
+
+    }
+
+    to {
+
+        left: 180%;
+
+    }
+
+}
+
+@media (max-width: 1024px) {
+
+    .phone-showcase {
+        height: 470px;
+    }
+
+    .phones {
+        width: 280px;
+        height: 470px;
+    }
+
+    .phone-front,
+    .phone-back {
+        width: 185px;
+    }
+
+    .showcase-glow {
+        width: 340px;
+        height: 340px;
+        filter: blur(90px);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .phone-showcase {
+
+        height: 420px;
+
+        margin: 0 auto;
+
+    }
+
+    .phones {
+
+        width: 240px;
+
+        height: 420px;
+
+    }
+
+    .phone-front,
+    .phone-back {
+
+        width: 165px;
+
+    }
+
+    .phone-front {
+
+        transform:
+            translate(50px, 15px) rotate(8deg);
+
+    }
+
+    .phone-back {
+
+        transform:
+            translate(-50px, -15px) rotate(-10deg);
+
+    }
+
+    .showcase-glow {
+
+        width: 300px;
+
+        height: 300px;
+
+        filter: blur(70px);
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .phone-showcase {
+
+        height: 360px;
+
+    }
+
+    .phones {
+
+        width: 210px;
+
+        height: 360px;
+
+    }
+
+    .phone-front,
+    .phone-back {
+
+        width: 145px;
+
+        border-radius: 28px;
+
+    }
+
+    .phone-front {
+
+        transform:
+            translate(42px, 12px) rotate(7deg);
+
+    }
+
+    .phone-back {
+
+        transform:
+            translate(-42px, -12px) rotate(-9deg);
+
+    }
+
+    .iphone {
+
+        padding: 6px;
+
+        border-radius: 30px;
+
+    }
+
+    .iphone img {
+
+        border-radius: 24px;
+
+    }
+
+    .dynamic-island {
+
+        width: 68px;
+
+        height: 20px;
+
+        top: 9px;
+
+    }
+
+    .showcase-glow {
+
+        width: 240px;
+
+        height: 240px;
+
+        filter: blur(55px);
+
+    }
+
+}
+
+@media (hover: none) {
+
+    .phone-showcase:hover .phone-front,
+    .phone-showcase:hover .phone-back {
+
+        transform: none;
+
+    }
+
+}
