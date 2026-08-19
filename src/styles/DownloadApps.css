@@ -10,7 +10,7 @@ body {
 
 .downloads {
     padding: 120px 8%;
-    background: linear-gradient(180deg, #000000 8%, #b1aeae 18%, #ffffff 100%);
+    background: linear-gradient(180deg, #000000 8%, #383737 18%, #ffffff 100%);
 }
 
 .downloads-container {
@@ -198,6 +198,7 @@ body {
     line-height: 1.8;
 
 }
+
 
 .android-btn,
 .ios-btn {

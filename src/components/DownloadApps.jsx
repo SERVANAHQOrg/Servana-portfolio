@@ -123,10 +123,10 @@ setTimeout(() => {
       title="Book Trusted Professionals"
       description="Find reliable professionals, schedule appointments, make secure payments and track every booking."
       features={[
-        "Book Services",
-        "Live Tracking",
-        "Secure Payments",
-        "Booking History",
+            "Find Trusted Professionals",
+    "Book Services Instantly",
+    "Track Your Booking",
+    "Secure Payments",
       ]}
     />
   </div>
@@ -151,10 +151,10 @@ setTimeout(() => {
       title="Grow Your Business"
       description="Receive nearby jobs, manage your availability, communicate with customers and track your earnings."
       features={[
-        "Accept Jobs",
-        "Manage Schedule",
-        "Earnings Dashboard",
-        "Availability Control",
+         "Get Nearby Jobs",
+  "Manage Your Schedule",
+  "Track Your Earnings",
+  "Build Your Reputation",
       ]}
     />
   </div>
