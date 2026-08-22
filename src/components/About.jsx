@@ -164,7 +164,7 @@ function About() {
           </div>
           <div className="founder-text" data-aos="fade-left" data-aos-delay="500">
             <h2>Meet Our Founder</h2>
-            <span className="founder-tag">Stephen Mambo as CEO Founder</span>
+            <span className="founder-tag">Stephen Mambo, Founder & CEO</span>
             <p> 
               At the heart of Servana is Stephen Mambo, our Founder & CEO — a dreamer turned builder who believed that trust, care, and technology could come together to transform how homes across Africa experience everyday life. <br /><br /> From Nairobi’s vibrant communities came his vision: to create a platform that doesn’t just connect people to services, but uplifts families, empowers workers, and strengthens communities. <br /><br /> Guided by empathy and driven by innovation, Steph embodies Servana’s spirit — bold, human, and unshakably committed to building a future where every home feels cared for and every professional feels valued. <br /><br /> “I started Servana because every family deserves peace of mind, and every worker deserves dignity. This is more than business — it’s a movement.”
                </p>
