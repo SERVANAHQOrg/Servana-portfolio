@@ -1,17 +1,61 @@
 .about {
+    position: relative;
+    isolation: isolate;
+
+    max-width: 1000px;
+    margin: auto;
+
     padding: 4rem 2rem;
-    background: #fdfdfd;
+
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    max-width: 1000px;
-    margin: auto;
+
     text-align: center;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    bottom: 0;
+    left: 50%;
+
+    width: 100vw;
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(ellipse at 15% 10%,
+            #22c55e50 0%,
+            rgb(255, 255, 255) 15%,
+            transparent 35%),
+
+        radial-gradient(ellipse at 75% 20%,
+        #22c55e50 0%,
+            rgb(255, 255, 255) 20%,
+            transparent 40%),
+
+        radial-gradient(ellipse at 35% 45%,
+            rgba(255, 255, 255, 0.712) 0%,
+            transparent 35%),
+
+        radial-gradient(ellipse at 90% 65%,
+            #22c55e 0%,
+            rgb(255, 255, 255) 20%,
+            transparent 40%),
+
+        radial-gradient(ellipse at 20% 85%,
+            rgb(255, 255, 255) 0%,
+            transparent 35%),
+
+        #050505d2;
 }
 
 .about h1 {
     display: inline-block;
-    color: #22C55E;
+    color: #000000;
     font-weight: bold;
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -20,19 +64,30 @@
 
 .we-text h2 {
     font-size: 2rem;
-    color: #000000;
+        background: linear-gradient(90deg, #000000ab, #22c55e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
     margin-bottom: 1rem;
 }
 
-.we-text h3 {
+.we-text2 h3 {
     font-size: 1.5rem;
     margin-top: 2rem;
-    color: #000000;
+        background: linear-gradient(90deg, #22c55e, #ffffff), #000000;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
 }
 
 .we-text p {
     line-height: 1.6;
     color: #000000;
+}
+
+.we-text2 p {
+    line-height: 1.6;
+    color: #ffffff;
 }
 
 .about-img {
@@ -48,7 +103,8 @@
 
 
 .about p,
-.we-text p {
+.we-text p 
+.we-text2 {
     text-align: justify;
     text-justify: inter-word;
 }
@@ -57,7 +113,7 @@
 .about-wrapper {
     position: relative;
     right: 12%;
-    background-color: #00000023;
+    background-color: #ffffff;
     padding: 1rem 1rem;
     border-radius: 22px;
     width: 450px;
@@ -81,14 +137,15 @@
 .about-wrapper2 {
     position: relative;
     left: 60%;
-    background-color: #00000023;
+    background: linear-gradient(135deg, #000000, #000000, #f0fdf4);;
     padding: 1rem 1rem;
     border-radius: 22px;
     width: 450px;
     height: 250px;
 }
 
-.about-wrappperr {
+
+/* .about-wrappperr {
     position: relative;
     left: 120px;
     background-color: #00000023;
@@ -97,7 +154,7 @@
     width: 680px;
     height: 580px;
     animation: shadowMorph 6s ease-in-out infinite;
-}
+} */
 
 @keyframes shadowMorph {
     0% {

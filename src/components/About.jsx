@@ -50,7 +50,7 @@ function About() {
         {/* Human image on the left */}
         <img src={WeImg} alt="Who we are illustration" className="about-human about-human-left" />
 
-        <div className="we-text" data-aos="fade-up" data-aos-duration="1000">
+        <div className="we-text2" data-aos="fade-up" data-aos-duration="1000">
           <h3>Who We Are</h3>
           <p>Born in Nairobi and designed for communities everywhere, Servana is a tech-driven service marketplace built on trust, transparency, and empathy. From cleaning and repairs to beauty and grooming, Servana brings the right people, with the right skills, to the right home — right on time.</p>
         </div>
@@ -62,7 +62,7 @@ function About() {
         <div className="about-layer layerr2"></div>
 
         <div className="we-text" data-aos="fade-up" data-aos-duration="1000">
-          <h3>Why We Exist</h3>
+          <h2>Why We Exist</h2>
           <p>Families often struggle to find reliable, affordable, and safe service providers. Servana reimagines this with rigorous vetting, community-first growth, and smart technology to make service booking seamless and stress-free.</p>
         </div>
 
@@ -78,7 +78,7 @@ function About() {
         {/* Human image on the left */}
         <img src={PromImg} alt="Our promise illustration" className="about-human about-human-left" />
 
-        <div className="we-text" data-aos="fade-up" data-aos-duration="1000">
+        <div className="we-text2" data-aos="fade-up" data-aos-duration="1000">
           <h3>Our Promise</h3>
           <p>Trust & Safety: Every professional is background-checked and trained.
 
@@ -94,7 +94,7 @@ function About() {
         <div className="about-layer layerr2"></div>
 
         <div className="we-text" data-aos="fade-up" data-aos-duration="1000">
-          <h3>Our Vision</h3>
+          <h2>Our Vision</h2>
           <p>We see a future where every home in Africa enjoys quality, affordable, and reliable services at the tap of a button — where households thrive, and service providers grow into proud entrepreneurs.</p>
         </div>
 
